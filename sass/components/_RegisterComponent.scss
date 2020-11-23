@@ -1,0 +1,27 @@
+.acronis-component-register-reunion{
+    height: 600px;
+    background-image: url('/assets/images/shutterstock_1408796183.jpg');
+       background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-position-x: center;
+    background-size: 4000px 1804px;
+}
+
+.acronis-component-border-left {
+    border-left: 1px solid $colorWhite ;
+}
+
+
+@media (max-width: 480px) {  
+
+    .acronis-component-register-reunion {
+        height: 100%;
+        padding: 40px 0px 40px 0px ;
+        background-size: 1639px 1392px;
+    }
+
+    .acronis-component-border-left{
+        border: 0px;
+    }
+
+}

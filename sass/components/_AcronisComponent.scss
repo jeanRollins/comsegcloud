@@ -1,0 +1,105 @@
+.acronis-component-question{
+   
+    background-color: $colorDark;
+}
+
+.acronis-component-question-description{
+    background-color: $colorSecondary;
+
+    .container{
+        //padding: 50px 0px 50px 0px;
+    }
+}
+
+.acronis-component-contact {
+    background-color: $colorGray;
+    height: 100%;
+    padding: 45px 0px 45px 0px ;
+}
+
+
+
+
+
+
+.acronis-component-border-text{
+    padding: 0px 0px 0px 75px ;
+}
+
+.acronis-component-banner-principal{
+    margin: 100px 0px 100px 0px ;
+}
+
+.acronis-component-banner-image-acronis{
+    margin: 60px 0px 70px 0px ;
+
+    img{
+        width: 75% ;
+    }
+    
+}
+
+.acronis-component-margin {
+    padding: 0px 70px 0px 70px;
+}
+
+
+
+@media (max-width: 480px) {  
+
+    .header-component-subheader-icon-image {
+        width: 85%;
+    }
+
+    .fontSizeLarge{
+        font-size: 25px;
+    }
+
+    .acronis-component-margin{
+        padding: 0px;
+    }
+
+    .acronis-component-title{
+        margin: 10px ;
+    }
+
+
+
+    .acronis-component-register-reunion {
+        height: 100%;
+        padding: 40px 0px 40px 0px ;
+        background-size: 1639px 1392px;
+     
+    }
+
+    .acronis-component-border-text{
+        padding: 0px 15px 0px 35px ;
+    }
+
+    .acronis-component-image-acronis{
+        margin: 30px 0px 30px 18px ;
+    }
+
+    .acronis-component-banner-principal{
+        margin: 30px 0px 30px 0px ;
+    }
+
+    .acronis-component-border-text{
+        border: 0px !important;
+    }
+
+    .acronis-component-banner-image-acronis{
+        img{
+            width: 100% ;
+        }
+    }
+
+    .acronis-component-items{
+        padding: 0px 20px 0px 20px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    .acronis-component-question-acronis{
+        font-size: 17px;
+    }
+}

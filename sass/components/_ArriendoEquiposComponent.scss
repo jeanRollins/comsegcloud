@@ -1,0 +1,33 @@
+.arriendo-equipos-components-padding{
+    padding: 0px 150px 0px 150px ;
+}
+
+.arriendo-equipos-components-title-item{
+    font-size: 45px;
+}
+
+.arriendo-equipos-list{
+    list-style: inside;
+}
+
+@media (max-width: 480px) {  
+
+    .arriendo-equipos-components-padding{
+        padding: 0px 15px 0px 15px ;
+    }
+
+    .arriendo-equipos-components-title{
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .arriendo-equipos-components-title-item{
+        font-size: 25px;
+        margin: 0px 0px 0px 20px ;
+    }
+
+    .arriendo-equipos-list{
+        list-style: initial;
+    }
+
+}

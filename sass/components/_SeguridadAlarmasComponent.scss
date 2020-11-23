@@ -1,0 +1,31 @@
+.seguridad-alarmas-component-item-title{
+    padding: 0px 0px 0px 50px ;
+    border-left: 3px solid $colorPrimary ;
+}
+
+.seguridad-alarmas-component-item{
+    padding: 0px 0px 0px 50px ;
+    line-height: 1.7;
+}
+
+
+
+
+@media (max-width: 480px) {  
+
+    .seguridad-alarmas-component-title{
+        font-size: 26px;
+    }
+
+    .seguridad-alarmas-component-item ,
+    .seguridad-alarmas-component-item-title{
+        padding: 0px 0px 0px 20px ;
+    }
+
+    .seguridad-alarmas-component-item-title{
+        h2{
+            font-size: 25px ;
+        }
+    }
+}
+

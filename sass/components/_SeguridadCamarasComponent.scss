@@ -1,0 +1,21 @@
+.seguridad-camaras-component-item-list{
+    padding: 0px 0px 0px 60px ;
+}
+
+
+
+@media (max-width: 480px) {  
+
+    .seguridad-camaras-component-item-list{
+        padding: 0px ;        
+    }
+
+    .seguridad-camaras-component-item{
+        margin: 25px 0px 0px 0px ;
+    }
+
+    .seguridad-camaras-component-title-item{
+        font-size: 22px;
+    }
+
+}

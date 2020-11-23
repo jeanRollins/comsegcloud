@@ -1,0 +1,133 @@
+
+
+.link{
+    color : $colorWhite ;
+    &:hover{
+        color : #68c3ff ;
+        text-decoration: none ;
+    }
+}
+
+.linkSecondary{
+    color : $colorSecondary ;
+    &:hover{
+        color : #007bff ;
+        text-decoration: none ;
+    }
+}
+
+.myContainer {
+    max-width: 1700px ;
+}
+
+.myContainerMD {
+    max-width: 1340px ;
+}
+
+.alignItemsEnd{
+    display: flex;
+    align-items: flex-end;
+}
+
+.textPrimary{
+    color : $colorPrimary ;
+}
+
+.bgDark{
+    background-color: $colorDark ;
+}
+
+.textGray{
+    color : $colorSecondary ;
+}
+
+.noBorder{
+    border : 0px  ;
+}
+
+.centerItems{
+    align-items: center;
+}
+
+.fontSizeSmall{
+    font-size: 11px;
+}
+
+.fontSizeMedium{
+    font-size: 14px;
+}
+
+.fontSizeLarge{
+    font-size: 20px;
+}
+
+
+.justifyContent{
+    text-align: justify;
+}
+
+.borderCircle{
+    height: 100px;
+    width: 100px;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 2px solid $colorSecondary;
+    padding: 17px 0px 0px 6px;
+}
+
+.btnBlack{
+    background-color: black;
+    border-radius: 20px ;
+    padding: 5px 35px 5px 35px ;
+    border: 1px solid black;
+}
+
+
+.hrWhite{
+    border-top: 1px solid #b3b3b3 ;
+}
+
+.verticalAlign{
+    vertical-align: center;
+}
+
+.verticalAlignEnd {
+    display: flex;
+    align-items: flex-end;
+}
+
+.orderLg1{
+    order: 1 ;
+}
+
+.orderLg2{
+    order: 2 ;
+}
+
+.titlePadding{
+    padding: 0px 150px 0px 150px ;
+}
+
+
+.lyricsWithBorder{
+    -webkit-text-stroke: 2px $colorPrimary;
+    color: transparent;
+}
+
+@media (max-width: 480px) {  
+
+    .orderSm1{
+        order: 1 ;
+    }
+
+    .orderSm2{
+        order: 2 ;
+    }
+
+    .titlePadding{
+        padding: 0px 15px 0px 15px ;
+    }
+
+
+}

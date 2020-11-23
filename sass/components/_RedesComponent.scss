@@ -1,0 +1,27 @@
+.redes-component-padding{
+    padding: 0px 150px 0px 150px ;
+}
+
+.redes-component-card-image{
+    height: 250px;
+}
+.redes-component-title{
+    margin: 50px 0px 0px 0px ;
+}
+
+@media (max-width: 480px) {  
+
+    .redes-component-padding{
+        padding: 0px 15px 0px 15px ;
+    }
+
+    .redes-component-title{
+        margin: 20px 0px 0px 0px ;
+        font-size: 20px;
+    }
+
+    .redes-component-description{
+        font-size: 15px;
+    }
+
+}

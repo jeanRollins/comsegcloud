@@ -1,0 +1,24 @@
+.redes-wan-component-item-number{
+    font-size: 65px;
+}
+
+.redes-wan-component-item-title  ,
+.redes-wan-component-item-number {
+    width: 100% ;
+    display: inline-block;
+
+}
+
+@media (max-width: 480px) {  
+
+    .redes-wan-component-item-number  {
+        width: 25% ;
+
+    }
+    .redes-wan-component-item-title {
+        width: 60% ;
+    }
+    .redes-wan-component-item{
+        margin: 35px 0px 0px 0px ;
+    }
+}

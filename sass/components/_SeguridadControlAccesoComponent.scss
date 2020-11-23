@@ -1,0 +1,33 @@
+.seguridad-control-acceso-bg{
+    background-color: $colorSecondary;
+    padding: 40px 0px 80px 0px ;
+}
+
+.seguridad-control-acceso-component-item-number{
+    font-size: 70px;
+}
+
+.seguridad-control-acceso-component-item-title{
+    width: 75% ;
+}
+
+
+@media (max-width: 480px) {  
+
+    .seguridad-control-acceso-component-title{
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .seguridad-control-acceso-component-padding-text{
+        padding: 0px 30px 0px 0px ;
+    }
+
+    .seguridad-control-acceso-component-item-number{
+        font-size: 40px;
+    }
+    .seguridad-control-acceso-component-item-title{
+        width: 100% ;
+        font-size: 22px ;
+    }
+}

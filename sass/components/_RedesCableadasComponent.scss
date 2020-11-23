@@ -1,0 +1,23 @@
+.redes-cableadas-component-padding{
+    padding: 0px 150px 0px 150px ;
+}
+
+.redes-cableadas-title{
+    margin: 30px 0px 20px 0px ;
+}
+
+.redes-cableadas-component-description{
+    line-height: 1.8;
+}
+
+@media (max-width: 480px) {  
+
+    .redes-cableadas-component-padding {
+        padding: 0px 15px 0px 15px ;
+    }
+
+    .redes-cableadas-component-description{
+        font-size: 15px;
+   }
+
+}
