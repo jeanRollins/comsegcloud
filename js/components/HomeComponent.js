@@ -1,9 +1,10 @@
 
+
 Vue.component('home-component', {
     data(){
       return {
-
-        slideItems:[
+        show : false ,
+        slideItems : [
           [
             {  
               file        : '/assets/images/slide/shutterstock_767544493.jpg' ,
@@ -39,13 +40,48 @@ Vue.component('home-component', {
             } 
           ]
         ] ,
-
+        textTransition :
+        `Entregamos  <span class="monserratBlack"> soluciones sencillas</span>,  confiables,  oportunas,  <span class="monserratBlack">fáciles de administrar </span>  y  acordes  a  las  necesidades  de  cada  cliente.`,
+        arrayText : [] ,
+        arrayTextLength : 0 ,
+        i : 0 
       }
     },
+    beforeMount() {
+    },
     mounted() {
-     
+      this.setItems() ;
+      this.showMessage() ;
     },
     methods:{
+      transTextToArray : function( text ){
+        const array = text.split("  ");
+        return array ;
+      },
+      addPacity : function( ){
+        let texts = document.querySelectorAll('.fadeEffect') ;
+        
+        texts[this.i].classList.add('fadeEffectOpacity') ;
+        this.i++ ;
+      },
+      showMessage : function( ){
+        const timeForStartIteration = 2000 ;
+
+        const timeForIterativeForElement = 100 ;
+
+        setTimeout( () => {
+          setInterval( () => this.i < this.arrayTextLength && this.addPacity( )  , timeForIterativeForElement ) 
+
+        } , timeForStartIteration ) ;
+
+      },
+      setItems : function (  ){
+        const arrayText =  this.transTextToArray( this.textTransition ) ;
+        this.arrayTextLength = arrayText.length ;
+        let textContent = `` ;
+        arrayText.forEach( row => textContent += `<span class="fadeEffect"> ${row} </span>` ) ;
+        this.$refs.textContent.innerHTML = textContent ;
+      },
       hoverSubmenu  : function( fileHover , ref  ) {
         let submenu = document.querySelector( '#' + ref ) ;
         submenu.src = fileHover ;
@@ -124,11 +160,11 @@ Vue.component('home-component', {
         <div class="bgDark">
           <div class="container">
             <div class="row">
-              <div class="col home-component-text-description text-white text-center monserratLight px-4">
-                <p>
-                  Entregamos <span class="monserratBlack"> soluciones sencillas</span>, confiables, oportunas, <span class="monserratBlack">fáciles de administrar </span>
-                  y acordes a las necesidades de cada cliente.  
+              <div class="col home-component-text-description text-white text-center monserratLight px-4 ">
+                <p class="" ref="textContent" > 
+                    
                 </p>
+             
               </div>
             </div>
           </div>

@@ -9,7 +9,8 @@ Vue.component('header-component', {
                     fileHover    : '/assets/icons/icon_mobile.svg',
                     itemToScroll : 'itemAcronis' ,
                     ref          : 'itemAcronisCyberProtect' ,
-                    href : '/cyberprotect.html'
+                    href : '/cyberprotect.html' ,
+                    ruteChild: ['/cyberprotect.html']
                 },
                 {
                     text : 'Desarrollo de sistemas' ,
@@ -17,7 +18,8 @@ Vue.component('header-component', {
                     fileHover : '/assets/icons/icon_cart.svg',
                     itemToScroll : 'itemAcronis' ,
                     ref          : 'itemAcronisDesarrolloSistemas',
-                    href : '/desarrollo_sistema.html'
+                    href : '/desarrollo_sistema.html' ,
+                    ruteChild: ['/desarrollo_sistema.html']
                 },
                 {
                     text : 'Seguridad Electrónica' ,
@@ -25,7 +27,14 @@ Vue.component('header-component', {
                     fileHover : '/assets/icons/icon_camera.svg' ,
                     itemToScroll : 'itemAcronis' , 
                     ref          : 'itemAcronisSeguridadElectronica' ,
-                    href : '/seguridad.html'
+                    href : '/seguridad.html' ,
+                    ruteChild: [
+                        '/seguridad.html' ,
+                        '/seguridad_alarmas.html' ,
+                        '/seguridad_control_acceso.html' ,
+                        '/seguridad_camaras.html' ,
+                        '/seguridad_contador.html' 
+                    ]
                 },
                 {
                     text : 'Soporte TI' ,
@@ -33,7 +42,8 @@ Vue.component('header-component', {
                     fileHover : '/assets/icons/icon_arreglar.svg' ,
                     itemToScroll : 'itemAcronis' ,
                     ref          : 'itemAcronisSoporteTi' ,
-                    href : '/soporte.html'
+                    href : '/soporte.html' ,
+                    ruteChild: ['/soporte.html']
                 },
                 {
                     text : 'Redes' ,
@@ -41,7 +51,12 @@ Vue.component('header-component', {
                     fileHover : '/assets/icons/icon_router.svg',
                     itemToScroll : 'itemAcronis' ,
                     ref          : 'itemAcronisRedes' ,
-                    href : '/redes.html'
+                    href : '/redes.html' ,
+                    ruteChild: [
+                        '/redes.html' ,
+                        '/redes_cableadas.html' ,
+                        '/redes_sdwan.html' 
+                    ]
                 },
                 {
                     text : 'Arriendo de equipos' ,
@@ -49,12 +64,30 @@ Vue.component('header-component', {
                     fileHover : '/assets/icons/icon_pc.svg' ,
                     itemToScroll : 'itemAcronis' ,
                     ref          : 'itemAcronisArriendoEquipos' ,
-                    href : '/arriendo_equipos.html' 
+                    href : '/arriendo_equipos.html' ,
+                    ruteChild : [
+                        '/arriendo_equipos.html' ,
+                        '/arriendo_notebooks.html' 
+                    ]
                 }
-            ]
+            ] ,
+            pathNameCurrent : ''
         }
     },
+    mounted(){
+        this.setIconPageCurrent()
+    },
     methods : {
+        setIconPageCurrent : function(){
+            this.pathNameCurrent = location.pathname ;
+            this.submenus.forEach( row => {
+                if( row.ruteChild.includes( this.pathNameCurrent ) ) {
+
+                    let itemMenu  = document.querySelector( '#' + row.ref ) ;
+                    itemMenu.src = row.fileHover ;
+                }  
+            })
+        } ,
         scrollElement : function ( idElement , e ) {
             
             e.preventDefault() ;
@@ -69,11 +102,13 @@ Vue.component('header-component', {
                 behavior: "smooth"
             });   
         },
-        hoverSubmenu  : function( fileHover , ref  ) {
+        hoverSubmenu  : function( fileHover , ref , urlCurrent  ) {
+            if( this.pathNameCurrent == urlCurrent ) return ;
             let submenu = document.querySelector( '#' + ref ) ;
             submenu.src = fileHover ;
         },
-        leaveSubmenu  : function( file , ref  ) {
+        leaveSubmenu  : function( file , ref , urlCurrent ) {
+            if( this.pathNameCurrent == urlCurrent ) return ;
             let submenu = document.querySelector( '#' + ref ) ;
             submenu.src = file ;
         }
@@ -131,8 +166,8 @@ Vue.component('header-component', {
                     <div class="row" >
                         <div class="col pt-3 " v-for="submenu in submenus">
                             <a class="link header-component-subheader-link" 
-                                v-on:mouseover="hoverSubmenu( submenu.fileHover , submenu.ref )"
-                                v-on:mouseleave="leaveSubmenu( submenu.file , submenu.ref )"
+                                v-on:mouseover="hoverSubmenu( submenu.fileHover , submenu.ref , submenu.href )"
+                                v-on:mouseleave="leaveSubmenu( submenu.file , submenu.ref , submenu.href )"
                                 v-on:click=" " 
                                 :href="submenu.href">  
                                 <img 

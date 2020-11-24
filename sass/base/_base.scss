@@ -115,6 +115,16 @@
     color: transparent;
 }
 
+.fadeEffect{
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+   transition: opacity 0.5s;
+}
+
+.fadeEffectOpacity{
+    opacity: 1;
+}
+
 @media (max-width: 480px) {  
 
     .orderSm1{

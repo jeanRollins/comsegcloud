@@ -23,7 +23,23 @@
     <div id="fullpage">
         
         <header-component>  </header-component>
-        <subheader-component>  </subheader-component>
+        <subheader-component
+            :items="[
+                {
+                    name : 'Home' ,
+                    url  : '/'
+                },
+                {
+                    name : 'Arriendo' ,
+                    url  : '/arriendo_equipos.html'
+                },
+                {
+
+                    name : 'Notebooks' ,
+                    url  : '/arriendo_notebooks.html'
+                }
+            ]"
+        >  </subheader-component>
         <arriendo-notebook-component> </arriendo-notebook-component>
         <footer-component>  </footer-component>
 
