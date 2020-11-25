@@ -25,28 +25,28 @@ Vue.component('menu-component', {
                     <div class="row">
                         <div class="col">
                             <hr>
-                            <a href="#" class="link text-white">Inicio</a>
+                            <a href="/" class="link text-white">Inicio</a>
                         
                         </div>    
                     </div>
                     <div class="row">
                         <div class="col">
                         <hr>
-                            <a href="#" class="link text-white">Nosotros</a>
+                            <a href="/" class="link text-white">Nosotros</a>
                         
                         </div>    
                     </div>
                     <div class="row">
                         <div class="col">
                         <hr>
-                            <a href="#" class="link text-white">Servicios</a>
+                            <a href="/" class="link text-white">Servicios</a>
                         
                         </div>    
                     </div>
                     <div class="row">
                         <div class="col">
                         <hr>
-                            <a href="#" class="link text-white">Contacto</a>
+                            <a href="/contacto.html" class="link text-white">Contacto</a>
                         
                         </div>    
                     </div>

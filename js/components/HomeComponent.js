@@ -198,14 +198,12 @@ Vue.component('home-component', {
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col-xl-6 mt-3">
               <p class="home-component-border-text-secondary" >
                 Creamos relaciones de largo plazo con nuestros clientes y proveedores. 
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-              </p>  
+               </p>  
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col-xl-6 mt-3">
               
               <p class="home-component-border-text-secondary ">
                 Ofrecemos productos y servicios que le simplifican el trabajo a nuestros clientes.. 
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
               </p>
             </div>
           </div>

@@ -140,8 +140,8 @@ Vue.component('header-component', {
                                             <div class="container " >
                                                 <div class="row "> 
                                                     <div class="col"> <a href="/" class = "link"> Inicio    </a> </div>             
-                                                    <div class="col"> <a href="#" class = "link"> Nosotros  </a> </div> 
-                                                    <div class="col"> <a href="#" class = "link"> Servicios </a> </div> 
+                                                    <div class="col"> <a href="/" class = "link"> Nosotros  </a> </div> 
+                                                    <div class="col"> <a href="/" class = "link"> Servicios </a> </div> 
                                                     <div class="col"> <a href="/contacto.html" class = "link"> Contacto  </a> </div>
                                                 </div>
                                             </div>

@@ -133,8 +133,157 @@ Vue.component('acronis-component', {
                         'Escritorio remoto.'
                     ] 
                 }
-            ]
-
+            ],
+            versionsAcronis : {
+                headers : [ 
+                    '' ,
+                    'Essentials' ,
+                    'Standard (Inluye todas las funciones de Cyber Protect Essentials)' ,
+                    'Advanced (Incluye todas las funciones de Cyber ​​Protect Standard )'
+                ],
+                content : [
+                    {
+                        item : 'Seguridad' ,
+                        essentials : {
+                            colspan : 1 ,
+                            items : [
+                                'Protección Activa' ,
+                                'Protección antivirus y antimalware',
+                                'Exploit prevention',
+                                'Filtrado de URL'
+                            ]
+                        } ,
+                        standard : {
+                            colspan : 1 ,
+                            items   : [
+                                'Filtrado y categorización de URL' ,
+                                'Protección continua de datos y estado del disco duro',
+                                'Mapas de protección',
+                                'Administración de Windows defender, Microsoft Security Essentials'
+                            ]
+                        }, 
+                        advanced : {
+                            colspan : 1 ,
+                            items : [
+                                'Recuperación segura de respaldos' ,
+                                'Escaneo del respaldo en busca de malware',
+                                'Mapas de protección',
+                                'Incorporación de Whitelist'
+                            ]
+                        } 
+                    },
+                    {
+                        item : 'SeguriCyber Protection Managementdad' ,
+                        essentials : {
+                            colspan : 1 ,
+                            items : [
+                                'Evaluación vulnerabilidades Windows' ,
+                                'Administración de parches',
+                                'Escritorio Remoto'
+                            ]
+                        } ,
+                        standard : {
+                            colspan : 1 ,
+                            items   : [
+                                'Evaluación vulnerabilidades Linux'
+                            ]
+                        }, 
+                        advanced : {
+                            colspan : 1 ,
+                            items : []
+                        } 
+                    },
+                    {
+                        item : 'Respaldo' ,
+                        essentials : {
+                            colspan : 1 ,
+                            items : [
+                                'A nivel de archivo' ,
+                                'Incremental/differential',
+                                'Archivos encriptados'
+                            ]
+                        } ,
+                        standard : {
+                            colspan : 1 ,
+                            items   : [
+                                'A nivel de Disco' ,
+                                'Mobile backup (iOS/Android)' ,
+                                'ESXi configuration backup' ,
+                                'NAS/shares backup' ,
+                                'Archive compression' ,
+                                'Backup validation(checksums)' ,
+                                'Multi-destination backup' 
+                            ]
+                        }, 
+                        advanced : {
+                            colspan : 1 ,
+                            items : []
+                        } 
+                    } , 
+                    {
+                        item : 'Aplicaciones Soportadas' ,
+                        essentials : {
+                            colspan : 1 ,
+                            items : []
+                        } ,
+                        standard : {
+                            colspan : 1 ,
+                            items   : [
+                                'Active Directory domain controller backup/restore' ,
+                                'Microsoft Exchange database backup' ,
+                                'Microsoft SQL Server database backup' ,
+                                'Microsoft SharePoint' ,
+                                'Microsoft 365 Mail'
+                            ]
+                        }, 
+                        advanced : {
+                            colspan : 1 ,
+                            items : [  
+                                'Microsoft Exchange cluster backup' ,
+                                'Microsoft SQL Server cluster backup' ,
+                                'Oracle DBMS backup' ,
+                                'SAP HANA backup via scripts (non-certified)'
+                            ]
+                        } 
+                    },
+                    {
+                        item : 'Plataformas Soportadas' ,
+                        essentials : {
+                            colspan : 1 ,
+                            items : [
+                                'Windows' ,
+                                'Windows Server' ,
+                                'Linux Server' ,
+                                'Mac'
+                            ]
+                        } ,
+                        standard : {
+                            colspan : 1 ,
+                            items   : [
+                                'IOS' ,
+                                'Android' ,
+                                'Public cloud VM ABB (Azure, Google Cloud, AWS)' ,
+                                'VMware vSphere VM ABB' ,
+                                'VM agentless and ABB' ,
+                                'Red Hat Virtualization VM ABB' ,
+                                'Hyper-V VM agentless and ABB' ,
+                                'Red Hat Virtualization VM ABB' ,
+                                'KVM ABB' ,
+                                'Citrix Hypervisor ABB' ,
+                                'Nutanix AHV ABB' ,
+                                'Oracle VM ABB' ,
+                                'Virtuozzo agentless backup' ,
+                                'ABB: agent-based backup' ,
+                                '(Mas todas las de Essencial)' 
+                            ]
+                        }, 
+                        advanced : {
+                            colspan : 1 ,
+                            items : [ ]
+                        } 
+                    }
+                ]
+            }
         }
     },
     template : /*html*/ `
@@ -149,16 +298,13 @@ Vue.component('acronis-component', {
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-7  col-lg-7 col-xl-7 acronis-component-border-text monserratSemiBold textGray border-left">
                         <p class=""> 
-                            <span class="textPrimary"> 
-                                Comseg Cyber Protect by Acronis </span> 
-                                es una aplicación única que integra copia de seguridad con protección  anti-malware de última generación y herramientas 
-                                de gestión de punto final.
+                            <span class="textPrimary"> Comseg Cyber Protect by Acronis </span> 
+                            es una aplicación única que integra copia de seguridad con protección  anti-malware de última generación y herramientas 
+                            de gestión de punto final.
                         </p>
-                        
                     </div>
-
-
                 </div>
+
                 <div class="row acronis-component-banner-image-acronis">
                     <div class="col text-center">
                         <img  src="/assets/images/bitmap.png" class="" alt="">
@@ -244,6 +390,46 @@ Vue.component('acronis-component', {
                 
                 </div>
 
+            </div>
+
+            <div class="acronis-component-table-content py-5" >
+                <div class="container" >
+                    <div class="row paddingTitle" >
+                        <div class="col" >
+                            <h3 class="monserratSemiBold text-center"> Comparación de versiones CyberProtect </h3>
+                        </div>
+                    </div>
+                    <div class="row paddingTitle monserratLight" >
+                        <div class="col" >
+                            <table class="table table-bordered mt-5 table-responsive">
+                                <tr class="bgGray text-white monserratSemiBold text-center">
+                                    <td v-for=" header in versionsAcronis.headers "> {{ header }} </td>
+                                </tr>
+                                <tr v-for=" content in  versionsAcronis.content " class="bg-white">
+                                    <td class="px-4" > {{ content.item }} </td>
+                                    <td v-bind:colpan="content.essentials.colspan "> 
+                                        <ul>
+                                            <li v-for="item in content.essentials.items " class="my-2 pr-2"> {{ item }}  </li>
+                                        </ul> 
+                                    </td>
+                                    <td v-bind:colpan="content.standard.colspan "> 
+                                        <ul>
+                                            <li v-for="item in content.standard.items" class="my-2 pr-2"> {{ item }}  </li>
+                                        </ul> 
+                                    </td>
+                                    <td v-bind:colpan="content.advanced.colspan "> 
+                                        <ul>
+                                            <li v-for="item in content.advanced.items" class="my-2 pr-2"> {{ item }}  </li>
+                                        </ul> 
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>    
             </div>
             
         </div>
