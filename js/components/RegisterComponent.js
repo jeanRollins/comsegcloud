@@ -1,4 +1,3 @@
-
 Vue.component( 'register-component', {
     data(){
         return {
@@ -8,15 +7,60 @@ Vue.component( 'register-component', {
     },
     methods : {
         registerReunion : function(){
-            console.log('click');
+            
+
+            const isValidate = this.validateForm() ;
+            
+            console.log('isValidate' , isValidate);
+            
+            if( !isValidate ) return false  ;
+            
+
+            this.$refs.alertFalse.classList.remove('show') ;
+         
+            this.$refs.alertTrue.classList.add('show') ;
+
+            this.$refs.nameFormRegister.value  = '' ;
+            this.$refs.emailFormRegister.value = '' ;
+
+
+        },
+        validateForm : function( ) {
+
+            if( this.$refs.nameFormRegister.value == '' ){
+                this.$refs.alertFalse.classList.add('show') ;
+                this.$refs.alertFalseText.textContent =  'Debe ingresar nombre.' ;
+                this.$refs.nameFormRegister.focus() ;
+                return false ;
+            }
+
+            if( this.$refs.emailFormRegister.value == '' ){
+                this.$refs.alertFalse.classList.add('show') ;
+                this.$refs.alertFalseText.textContent =  'Debe ingresar email.' ;
+                this.$refs.emailFormRegister.focus() ;
+                return false ;
+            }
+            
+            const isValidate = this.validateEmail( this.$refs.emailFormRegister.value  ) ;
+
+            if( !isValidate ) return false 
+            
+
+            return true ;
+        }
+        ,
+        hideAlert : function( ref ){
+            this.$refs[ref].classList.remove('show') ;
+        },
+        validateEmail : function( email ){
+            const regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test( email ) ? true : false ; 
         }
     },
 
     mounted (){
         
-        let recaptchaScript = document.createElement('script') ;
-        recaptchaScript.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js' ) ;
-        document.head.appendChild(recaptchaScript) ;
+ 
     },
     template : /*html*/ `
 
@@ -44,7 +88,7 @@ Vue.component( 'register-component', {
                                         <input 
                                             type="text" 
                                             class="form-control"  
-                                            id="nameFormRegister" 
+                                            ref="nameFormRegister" 
                                             aria-describedby="emailHelp"
                                             v-model="name"    
                                         >
@@ -54,9 +98,8 @@ Vue.component( 'register-component', {
                                         <input 
                                             type="text" 
                                             class="form-control" 
-                                            id="emailFormRegister" 
+                                            ref="emailFormRegister" 
                                             aria-describedby="emailHelp"
-                                            v-model="email"    
                                         >
                                     </div>
                                 </div>
@@ -73,25 +116,35 @@ Vue.component( 'register-component', {
                                 </div>
                                 
                             </div>
+                            <div class="row" >
+                                
+                                <div class="col text-white ml-4 mt-3" >
+                                    
+                                    <div class="alert alert-success alert-dismissible fade"  ref="alertTrue" role="alert">
+                                        
+                                        <span ref=""> Contacto enviado, nos contactaremos en brevedad. </span>
+
+                                        <button type="button" v-on:click="hideAlert('alertTrue')" class="close" > 
+                                            <span aria-hidden="true">&times  </span>    
+                                        </button>
+                                    </div>
+
+                                    <div class="alert alert-danger alert-dismissible fade"  ref="alertFalse" role="alert">
+                                        <span ref="alertFalseText">  </span>
+
+                                        <button type="button" v-on:click="hideAlert('alertFalse')" class="close" > 
+                                            <span aria-hidden="true">&times  </span>    
+                                        </button>
+                                    </div>
+
+                                </div>
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div aria-live="polite" aria-atomic="true" id="toastrMessage" style="position: relative; min-height: 200px;">
-                <div class="toast" style="position: absolute; top: 0; right: 0;">
-                    <div class="toast-header">
-                        <img src="/assets/icons/favicon.png" class="rounded mr-2" alt="...">
-                        <strong class="mr-auto">Bootstrap</strong>
-                        <small>11 mins ago</small>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="toast-body">
-                        Hello, world! This is a toast message.
-                    </div>
-                </div>
-            </div>
+            
         </div>
           
     `
