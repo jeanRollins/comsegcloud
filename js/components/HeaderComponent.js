@@ -84,7 +84,12 @@ Vue.component('header-component', {
                 if( row.ruteChild.includes( this.pathNameCurrent ) ) {
 
                     let itemMenu  = document.querySelector( '#' + row.ref ) ;
+                    let submenuText  = document.querySelector( '#text' + row.ref ) ;
+
                     itemMenu.src = row.fileHover ;
+                    submenuText.classList.add('textPrimaryLight') ;
+                    submenuText.classList.remove('text-white') ;
+                    submenuText.disabled = true ;
                 }  
             })
         } ,
@@ -102,14 +107,21 @@ Vue.component('header-component', {
                 behavior: "smooth"
             });   
         },
-        hoverSubmenu  : function( fileHover , ref , urlCurrent  ) {
+        hoverSubmenu  : function( fileHover , ref , urlCurrent , textId ) {
             if( this.pathNameCurrent == urlCurrent ) return ;
             let submenu = document.querySelector( '#' + ref ) ;
+            let submenuText = document.querySelector( '#' + textId ) ;
+            submenuText.classList.add('textPrimaryLight') ;
+            submenuText.classList.remove('text-white') ;
+
             submenu.src = fileHover ;
         },
-        leaveSubmenu  : function( file , ref , urlCurrent ) {
+        leaveSubmenu  : function( file , ref , urlCurrent  , textId) {
             if( this.pathNameCurrent == urlCurrent ) return ;
             let submenu = document.querySelector( '#' + ref ) ;
+            let submenuText = document.querySelector( '#' + textId ) ;
+            submenuText.classList.remove('textPrimaryLight') ;
+            submenuText.classList.add('text-white') ;
             submenu.src = file ;
         }
     },
@@ -162,27 +174,25 @@ Vue.component('header-component', {
                 
                 </nav>
                 <div class="header-component-subheader">
-                <div class="container myContainerMD">
-                    <div class="row" >
-                        <div class="col pt-3 " v-for="submenu in submenus">
-                            <a class="link header-component-subheader-link" 
-                                v-on:mouseover="hoverSubmenu( submenu.fileHover , submenu.ref , submenu.href )"
-                                v-on:mouseleave="leaveSubmenu( submenu.file , submenu.ref , submenu.href )"
-                                v-on:click=" " 
-                                :href="submenu.href">  
-                                <img 
-                                    class="header-component-subheader-icon-image" 
-                                    :src="submenu.file" 
-                                    :id="submenu.ref"
-                                    >
-                                <div class="d-none  d-sm-block d-md-none d-lg-inline-block d-xl-inline-block monserratLight" > {{  submenu.text  }} </div>
-                            </a>
+                    <div class="container myContainerMD">
+                        <div class="row" >
+                            <div class="col pt-3 " v-for="submenu in submenus">
+                                <a class="text-decoration-none header-component-subheader-link" 
+                                    v-on:mouseover="hoverSubmenu( submenu.fileHover , submenu.ref , submenu.href , 'text'+ submenu.ref )"
+                                    v-on:mouseleave="leaveSubmenu( submenu.file , submenu.ref , submenu.href , 'text'+ submenu.ref )"
+                                    v-on:click=" " 
+                                    :href="submenu.href">  
+                                    <img 
+                                        class="header-component-subheader-icon-image" 
+                                        :src="submenu.file" 
+                                        :id="submenu.ref"
+                                        >
+                                    <div :id="'text'+ submenu.ref" class="d-none text-white  d-sm-block d-md-none d-lg-inline-block d-xl-inline-block monserratLight" > {{  submenu.text  }} </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
               
-            </div>
-
-            `
+            </div> `
 })

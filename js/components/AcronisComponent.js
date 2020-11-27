@@ -40,7 +40,7 @@ Vue.component('acronis-component', {
                 },
                 {
                     title : 'Equipos Finales' ,
-                    file  : '../../assets/images/net.svg' ,
+                    file  : '../../assets/images/notebook.svg' ,
                     description : [
                         'Windows PC',
                         'Surface Family' ,
@@ -49,7 +49,7 @@ Vue.component('acronis-component', {
                 },
                 {
                     title : 'Aplicaciones' ,
-                    file  : '../../assets/images/notebook.svg' ,
+                    file  : '../../assets/images/net.svg' ,
                     description : [
                         'Oracle Database',
                         'Exchange' ,
@@ -296,7 +296,7 @@ Vue.component('acronis-component', {
                     <div class="col-sm-10 col-md-4  col-lg-4  col-xl-4  acronis-component-image-acronis ">
                         <img src="/assets/images/acronis.png" class="img-fluid " alt="">
                     </div>
-                    <div class="col-xs-10 col-sm-10 col-md-7  col-lg-7 col-xl-7 acronis-component-border-text monserratSemiBold textGray border-left">
+                    <div class="col-xs-10 col-sm-10 col-md-7  col-lg-7 col-xl-7 acronis-component-border-text monserratSemiBold textGray border-left fontSizeLarge">
                         <p class=""> 
                             <span class="textPrimary"> Comseg Cyber Protect by Acronis </span> 
                             es una aplicación única que integra copia de seguridad con protección  anti-malware de última generación y herramientas 
@@ -330,7 +330,7 @@ Vue.component('acronis-component', {
 
                 <div class="container">
                     <div class="row">
-                        <div  class="col my-5">
+                        <div  class="col">
                             <div class="container monserratLight acronis-component-margin my-2" v-for=" (feature , key) in featuresCyberProtect ">
                                 <div class="row ">
                                     <div class="col-sm-5 acronis-component-title">
@@ -358,9 +358,9 @@ Vue.component('acronis-component', {
 
            
 
-            <div class="container ">
+            <div class="container pb-5">
 
-                <div class="row my-5" >
+                <div class="row acronis-component-question-margin" >
                     <div class="col text-center" >
                         <h2 class="monserratSemiBold"> ¿Qué plataformas puedo proteger?</h2>
                     </div>
@@ -369,15 +369,15 @@ Vue.component('acronis-component', {
 
             
 
-                <div class="row monserratLight" >
+                <div class="row monserratLight pb-5" >
 
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 my-5" v-for="plataform in plataforms" >
                         <div  class=" card w-100 noBorder centerItems" >
         
-                            <img  v-bind:src="plataform.file" class=" h-100 w-50" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title monserratSemiBold">{{ plataform.title }}</h5>
-                                <ul class="textGray justifyContent">
+                            <img  v-bind:src="plataform.file" class=" acronis-component-plataform-image" alt="...">
+                            <div class="card-body float-left">
+                                <h5 class="card-title monserratSemiBold ">{{ plataform.title }}</h5>
+                                <ul class="textGray justifyContent pl-3">
                                     <li class="my-1 fontSizeSmall monserratSemiBold" v-for="item in plataform.description " >
                                         {{ item }}
                                     </li>
@@ -394,36 +394,47 @@ Vue.component('acronis-component', {
 
             <div class="acronis-component-table-content py-5" >
                 <div class="container" >
-                    <div class="row paddingTitle" >
+                    <div class="row paddingTitle acronis-component-table-title" >
                         <div class="col" >
                             <h3 class="monserratSemiBold text-center"> Comparación de versiones CyberProtect </h3>
                         </div>
                     </div>
-                    <div class="row paddingTitle monserratLight" >
+                    <div class="row paddingTitle monserratLight pb-5" >
                         <div class="col" >
-                            <table class="table table-bordered mt-5 table-responsive">
-                                <tr class="bgGray text-white monserratSemiBold text-center">
-                                    <td v-for=" header in versionsAcronis.headers "> {{ header }} </td>
-                                </tr>
-                                <tr v-for=" content in  versionsAcronis.content " class="bg-white">
-                                    <td class="px-4" > {{ content.item }} </td>
-                                    <td v-bind:colpan="content.essentials.colspan "> 
-                                        <ul>
-                                            <li v-for="item in content.essentials.items " class="my-2 pr-2"> {{ item }}  </li>
-                                        </ul> 
-                                    </td>
-                                    <td v-bind:colpan="content.standard.colspan "> 
-                                        <ul>
-                                            <li v-for="item in content.standard.items" class="my-2 pr-2"> {{ item }}  </li>
-                                        </ul> 
-                                    </td>
-                                    <td v-bind:colpan="content.advanced.colspan "> 
-                                        <ul>
-                                            <li v-for="item in content.advanced.items" class="my-2 pr-2"> {{ item }}  </li>
-                                        </ul> 
-                                    </td>
+                            <table class="table table-bordered my-5 table-responsive">
+                                
 
-                                </tr>
+                           
+                                    <tr class="bgGray text-white monserratSemiBold text-left">
+                                        <th v-for=" header in versionsAcronis.headers " 
+                                            class="acronis-component-table-item-header-padding"> 
+                                            {{ header }} 
+                                        </th>
+                                    </tr>
+
+                                
+                                <tbody class="fontSizeMedium">
+                                    <tr v-for=" content in  versionsAcronis.content " class="bg-white">
+                                        <td class="acronis-component-table-item-padding " > {{ content.item }} </td>
+                                        <td v-bind:colpan="content.essentials.colspan "> 
+                                            <ul>
+                                                <li v-for="item in content.essentials.items " class="my-2 pr-2"> {{ item }}  </li>
+                                            </ul> 
+                                        </td>
+                                        <td v-bind:colpan="content.standard.colspan "> 
+                                            <ul>
+                                                <li v-for="item in content.standard.items" class="my-2 pr-2"> {{ item }}  </li>
+                                            </ul> 
+                                        </td>
+                                        <td v-bind:colpan="content.advanced.colspan "> 
+                                            <ul>
+                                                <li v-for="item in content.advanced.items" class="my-2 pr-2"> {{ item }}  </li>
+                                            </ul> 
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
 
                             </table>
 

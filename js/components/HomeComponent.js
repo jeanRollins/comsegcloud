@@ -9,34 +9,40 @@ Vue.component('home-component', {
             {  
               file        : '/assets/images/slide/shutterstock_767544493.jpg' ,
               title       : 'Comseg CybertProtect' ,
-              description : 'Seguridad, Protección y Gestión'
+              description : 'Seguridad, Protección y Gestión' ,
+              url         : '/cyberprotect.html'
             },
             {  
               file        : '/assets/images/slide/shutterstock_367136834.jpg' ,
               title       : 'Desarrollo de Sistemas' ,
-              description : 'E-commerce y más'
+              description : 'E-commerce y más' ,
+              url         : '/desarrollo_sistema.html'
             },
             {  
               file        : '/assets/images/slide/shutterstock_1393698617.jpg' ,
               title       : 'Seguridad y protección' ,
-              description : 'Inteligencia y negocio'
+              description : 'Inteligencia y negocio' ,
+              url         : '/seguridad.html'
             },  
           ],
           [
             {  
               file        : '/assets/images/slide/shutterstock_1236017206.jpg' ,
               title       : 'Comseg CybertProtect' ,
-              description : 'Seguridad, Protección y Gestión'
+              description : 'Seguridad, Protección y Gestión' ,
+              url         : '/soporte.html'
             },
             {  
               file        : '/assets/images/slide/shutterstock_1278039331.jpg' ,
               title       : 'Seguridad y protección' ,
-              description : 'E-commerce y más'
+              description : 'E-commerce y más' ,
+              url         : '/redes.html'
             },
             {  
               file        : '/assets/images/slide/shutterstock_1393698617.jpg' ,
               title       : 'Desarrollo de Sistemas' ,
-              description : 'Seguridad, Protección y Gestión'
+              description : 'Seguridad, Protección y Gestión' ,
+              url         : '/arriendo_equipos.html'
             } 
           ]
         ] ,
@@ -138,13 +144,20 @@ Vue.component('home-component', {
                         <div class="row">
                           <div class="col-lg-4  mb-3" v-for="item in items">
                             <div class="card noBorder p-3">
-                              <img 
-                                class = " img-fluid "
-                                :src  = "  item.file "  
-                              >
+                              
+                              <a :href="item.url" class="text-decoration linkSecondary" >
+                                <img 
+                                  class = " img-fluid "
+                                  :src  = "  item.file "  
+                                >
+
+                              </a>
+                             
                               <div class="card-body">
-                                <h4 class="card-title monserratSemiBold">{{ item.title }}</h4>
-                                <p class="card-text monserratLight"> {{ item.description }} </p>
+                                <a :href="item.url" class="text-decoration linkSecondary" >
+                                  <h4 class="card-title monserratSemiBold">{{ item.title }}</h4>
+                                  <p class="card-text monserratLight"> {{ item.description }} </p>
+                                </a>    
                               </div>
                             </div>
                           </div>
@@ -180,7 +193,7 @@ Vue.component('home-component', {
             </div>
           </div>
           <div class="row mt-5">
-            <div class="col monserratBlack h5 textGray home-component-text-principal">
+            <div class="col monserratBlack h5 textGray home-component-text-principal ">
               <p>
                 Desde 1989 estamos orientados a entregar soluciones sencillas, confiables, oportunas, fáciles de administrar 
                 y acordes a las necesidades de cada cliente, sin perder de vista la relación precio-calidad.
