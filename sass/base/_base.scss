@@ -11,7 +11,7 @@
 .linkSecondary{
     color : $colorSecondary ;
     &:hover{
-        color : #007bff ;
+        color : $blueLight ;
         text-decoration: none ;
     }
 }
@@ -31,6 +31,10 @@
 
 .textPrimary{
     color : $colorPrimary ;
+}
+
+.textPrimaryLight{
+    color : $blueLight ;
 }
 
 .bgDark{
@@ -127,6 +131,16 @@
 
 .fadeEffectOpacity{
     opacity: 1;
+}
+
+.spinnerGrow{
+    height  : 14px  ;
+    width   : 14px  ;
+    vertical-align : inherit ;
+}
+
+.table-bordered {
+    border: 0px solid #dee2e6;
 }
 
 @media (max-width: 480px) {  

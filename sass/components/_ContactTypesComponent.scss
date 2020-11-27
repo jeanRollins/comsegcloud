@@ -1,7 +1,7 @@
 .acronis-component-contact {
     background-color: $colorGray;
     height: 100%;
-    padding: 45px 0px 45px 0px ;
+    padding: 90px 0px 90px 0px ;
 }
 
 .acronis-component-background {
@@ -11,4 +11,11 @@
 .acronis-component-image-circle{
     height: 55px;
     width: 83px;
+}
+
+@media (max-width: 480px) {  
+
+    .acronis-component-contact {
+        padding: 35px 0px 45px 0px ;
+    }
 }

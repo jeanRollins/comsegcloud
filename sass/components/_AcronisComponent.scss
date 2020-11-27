@@ -3,12 +3,9 @@
     background-color: $colorDark;
 }
 
-.acronis-component-question-description{
+.acronis-component-question-description {
+    padding: 100px 0px 100px 0px ;
     background-color: $colorSecondary;
-
-    .container{
-        //padding: 50px 0px 50px 0px;
-    }
 }
 
 .acronis-component-contact {
@@ -17,7 +14,9 @@
     padding: 45px 0px 45px 0px ;
 }
 
-
+.acronis-component-question-margin{
+    margin: 150px 0px 80px 0px ;
+}
 
 
 
@@ -31,7 +30,7 @@
 }
 
 .acronis-component-banner-image-acronis{
-    margin: 60px 0px 70px 0px ;
+    margin: 60px 0px 140px 0px ;
 
     img{
         width: 75% ;
@@ -47,8 +46,31 @@
     background-color: $colorGrayLight ;
 
 }
+.acronis-component-plataform-image{
+    height: 170px;
+}
+
+.acronis-component-table-title{
+    margin: 80px 0px 50px 0px ;
+}
+
+.acronis-component-table-item-padding{
+    padding: 20px 25px 20px 25px !important ;
+}
+.acronis-component-table-item-header-padding{
+    padding: 17px 36px 17px 36px !important ;
+}
 
 @media (max-width: 480px) {  
+
+
+    .acronis-component-table-title{
+        margin: 50px 0px 30px 0px ;
+    }
+
+    .acronis-component-question-margin{
+        margin: 50px 0px 50px 0px ;
+    }
 
     .header-component-subheader-icon-image {
         width: 85%;
@@ -66,7 +88,9 @@
         margin: 10px ;
     }
 
-
+    .acronis-component-question-description {
+        padding: 50px 0px 50px 0px ;
+    }
 
     .acronis-component-register-reunion {
         height: 100%;
@@ -84,7 +108,7 @@
     }
 
     .acronis-component-banner-principal{
-        margin: 30px 0px 30px 0px ;
+        margin: 30px 20px 30px 0px ;
     }
 
     .acronis-component-border-text{

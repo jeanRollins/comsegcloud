@@ -1,0 +1,10 @@
+.subheader-component-padding {
+    padding: 0px 95px 0px 53px; ;
+}
+
+@media (max-width: 480px) {  
+
+    .subheader-component-padding {
+        padding: 0px 0px  0px 0px ;
+    }
+}
