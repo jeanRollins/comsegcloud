@@ -9,7 +9,7 @@ Vue.component('menu-component', {
 
         openNav : function (e) {
             e.preventDefault() ;
-            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("mySidenav").style.width = "90%";
         },
         closeNav : function () {
             document.getElementById("mySidenav").style.width = "0";
@@ -18,7 +18,7 @@ Vue.component('menu-component', {
     },
     template : /*html*/ `
         <div > 
-            <a  v-on:click="openNav($event)"> <img src="../../assets/icons/menu.svg" > </a>   
+            <a  v-on:click="openNav($event)"> <img src="../../assets/icons/menu.svg" class="menu-component-size"> </a>   
             <div id="mySidenav" class="menu-component-sidenav ">
                 <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav()">&times;</a>
                 <div class="container ">

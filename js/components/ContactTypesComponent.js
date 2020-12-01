@@ -38,7 +38,7 @@ Vue.component( 'contact-types-component', {
 
                 <div class="row h-100 monserratSemiBold" >
 
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " v-for="contact in contacts" >
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 " v-for="contact in contacts" >
                         <div  class=" card w-100 noBorder centerItems acronis-component-background textGray " >
 
                             <div class="borderCircle ">

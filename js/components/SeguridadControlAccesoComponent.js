@@ -11,19 +11,33 @@ Vue.component( 'seguridad-control-acceso-component', {
                 {
                     title : `Sistema de proximidad` ,
                     text  : `Permite la utilzación de tarjetas u otros objetos que al acercarlos al terminal inicia la autenticación.` ,
-                    file  : `/assets/images/seguridad/shutterstock_739165318.jpg`
+                    file  : `/assets/images/seguridad/shutterstock_739165318.jpg` ,
+                    style : `   background-image : url(/assets/images/seguridad/shutterstock_739165318.jpg) ;
+                                background-position-y: -36px;
+                                background-position-x: -10px;
+                                background-size: 208px 150px;
+                            `
                 },
                 {
                     title : `Sistemas biométricos` ,
                     text  : `Que se basan en el reconocimiento de una característica física de la persona que solicita 
-                            el acceso para que pueda ser verificada de forma automática e instantánea.            
-                    ` ,
-                    file  : `/assets/images/seguridad/control_acceso.png`
+                            el acceso para que pueda ser verificada de forma automática e instantánea.` ,
+                    file  : `/assets/images/seguridad/control_acceso.png` ,
+                    style : `   background-image : url(/assets/images/seguridad/control_acceso.png) ;
+                                background-position-y: -21px;
+                                background-position-x: -57px;
+                                background-size: 240px 182px;
+                            `
                 },
                 {
                     title : `Sistemas de reconocimiento de matrícula o TAG` ,
                     text  : `Controlan el acceso mediante la identificación de la persona, del vehículo o la combinación de ambas.` ,
-                    file  : `/assets/images/seguridad/shutterstock_1408823888.jpg`
+                    file  : `/assets/images/seguridad/shutterstock_1408823888.jpg` ,
+                    style : `   background-image : url(/assets/images/seguridad/shutterstock_1408823888.jpg) ;
+                                background-size: 190px 113px;
+                                background-position-x: -3px;
+                                background-position-y: center;
+                            `
                 }
             ] ,
             funcionamientos : [
@@ -43,24 +57,29 @@ Vue.component( 'seguridad-control-acceso-component', {
     template : /*html*/ `
         <div class="">
             <div class="container monserratLight">
-                <div class="row text-center " >
+                <div class="row text-lg-center text-xl-center " >
 
-                    <div class="col">
-                        <h2 class="textPrimary monserratSemiBold text-xl-center text-lg-center seguridad-control-acceso-component-title"> Sistema de Control de Acceso </h2>
+                    <div class="col ">
+                        <h2 class="textPrimary monserratSemiBold text-xl-center text-lg-center  titleMargin"> 
+                            Sistema de Control de Acceso 
+                        </h2>
                     </div>
                 </div>
 
-                <div class="row  mt-5 " >
+                <div class="row seguridad-control-acceso-component-title" >
 
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <img src="/assets/images/seguridad/shutterstock_1033910839.jpg" class="img-fluid">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+
+                        <div class="seguridad-control-acceso-component-image">
+                        
+                        </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-2 seguridad-control-acceso-component-padding-text">
-                        <h5 class="monserratSemiBold my-4 textGray pl-4"> Un sistema de control de acceso tiene tres funciones principales: </h5>
-
-                        <ul >
-                            <li v-for="funcion in  funciones" class="mt-3 pl-2"> 
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 seguridad-control-acceso-component-padding-text">
+                        <h5 class="monserratSemiBold mt-4 textBlack "> Un sistema de control de acceso tiene tres funciones principales: </h5>
+                        <br/>
+                        <ul class="px-3">
+                            <li v-for="funcion in  funciones" class="mt-3 "> 
                                 {{ funcion }}
                             </li>
                         </ul>
@@ -74,8 +93,8 @@ Vue.component( 'seguridad-control-acceso-component', {
                 <div class="container monserratLight  ">
                     <div class="row titlePadding   " >
 
-                        <div class="col my-5">
-                            <h4 class="text-white monserratSemiBold  text-xl-center text-lg-center seguridad-control-acceso-component-title"> 
+                        <div class="col ">
+                            <h4 class="text-white monserratSemiBold  text-xl-center text-lg-center titleMargin"> 
                                 En base a esto podemos encontrar diferentes tipos de control de acceso según el sistema de 
                                 identificación que utilicen:
                             </h4>
@@ -90,11 +109,13 @@ Vue.component( 'seguridad-control-acceso-component', {
                         <div class="col ">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
-                                        <img 
-                                            :src  = "typeControl.file"
-                                            class = "img-fluid" 
-                                        >
+                                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 p-0">
+                                    
+                                        <div
+                                            :style = "typeControl.style " 
+                                            class  = "seguridad-control-acceso-component-item-img ">
+
+                                        </div>
                                     </div>
                                     <div class="col mt-3">
                                         <h5 class="text-white float-left monserratSemiBold" > {{ typeControl.title }} </h5>
@@ -117,10 +138,10 @@ Vue.component( 'seguridad-control-acceso-component', {
             </div>
 
             <div class="container" >
-                <div class="row" >
+                <div class="row titlePadding"  >
                     
-                    <div class="col my-5">
-                        <h2 class="textGray monserratSemiBold text-xl-center text-lg-center seguridad-control-acceso-component-title"> 
+                    <div class="col ">
+                        <h2 class="textDark monserratSemiBold text-xl-center text-lg-center titleMargin"> 
                             Existen distintas formas de funcionamiento de los controles de accesos :
                         </h2>
                         
@@ -132,7 +153,7 @@ Vue.component( 'seguridad-control-acceso-component', {
                     <div class="col px-2" v-for="funcionamiento in funcionamientos">
                         <table>
                             <tr>
-                                <td> <h1 class="textPrimary monserratSemiBold px-2 seguridad-control-acceso-component-item-number"> {{ funcionamiento.number }}. </h1> </td>
+                                <td> <h1 class="textDark monserratSemiBold px-2 seguridad-control-acceso-component-item-number"> {{ funcionamiento.number }}. </h1> </td>
                                 <td> 
                                     <h4 class="textPrimary monserratSemiBold  seguridad-control-acceso-component-item-title">  
                                         {{ funcionamiento.title }}
@@ -143,7 +164,7 @@ Vue.component( 'seguridad-control-acceso-component', {
                             <tr>
                                 <td>  </td>
                                 <td> 
-                                    <p class="  fontSizeMedium">  
+                                    <p class="  seguridad-control-acceso-component-text-item">  
                                         {{ funcionamiento.text }}
                                     </p>
                                 </td>

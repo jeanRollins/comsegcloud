@@ -27,7 +27,21 @@
    
 /* Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */
-@media (min-width: 768px) and (max-width: 1199px) {  }   
+@media (min-width: 768px) and (max-width: 1199px) {  
+
+    .header-component-subheader-icon-image{
+        width: 42% ;
+    }
+
+    .header-component-logo {
+        width: 74%;
+    }
+
+    .header-component-phone{
+        font-size: 22px ;
+        margin: 0px  0px 20px  0px ;
+    }
+}   
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
 @media (max-width: 767px) {  }   

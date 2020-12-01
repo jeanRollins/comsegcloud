@@ -23,9 +23,9 @@ Vue.component( 'footer-component' , {
         }
     },
     template: /*html*/ `
-        <div class="footer-component pb-3">
+        <div class="footer-component h-100">
             <div class="container myContainer " >
-                <div class="row">
+                <div class="row ">
                     <div class="col-4 d-none  d-sm-block d-md-none d-lg-block d-xl-block">
                         <img src="../../assets/logos/Imagotipo vectorial_ COMSEG_page-0005.jpg" class="footer-component-logo" > 
                     </div>
@@ -33,11 +33,11 @@ Vue.component( 'footer-component' , {
                         <div class="container h-100 ">
                             <div class="row h-100 align-items-center">
                                 
-                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 text-white d-inline footer-component-space p-0" v-for="contact in contacts" >
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-white d-inline footer-component-space p-0" v-for="contact in contacts" >
                                     <div class="footer-component-contact-icon text-center">
                                        <img v-bind:src="contact.file" class="footer-component-icon mt-2">
                                     </div>    
-                                    <a class="link"  :href="contact.href" > <span class="fontSizeSmall w-75 monserratLight"> {{ contact.text }}</span> </a> 
+                                    <a class="link"  :href="contact.href" > <span class="footer-component-contact-text w-75 monserratLight"> {{ contact.text }}</span> </a> 
                                 </div>
 
                               

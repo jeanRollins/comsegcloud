@@ -42,6 +42,12 @@
     padding: 20px;
   }
   
+  @media (min-width: 768px) and (max-width: 1199px) {  
+
+    .menu-component-size{
+      width: 30% ;
+    }
+}   
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .menu-component-sidenav {padding-top: 15px;}

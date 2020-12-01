@@ -125,19 +125,14 @@ Vue.component( 'register-component', {
             return regex.test( email ) ? true : false ; 
         }
     },
-
-    mounted (){
-        
-        console.log('locations' , location.origin );
-    },
     template : /*html*/ `
 
         <div class="acronis-component-register-reunion monserratSemiBold">
             <div class="container h-100">
                 <div class="h-100 row align-items-center" >
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col-xl-6 py-3 d-none  d-sm-block d-md-none d-lg-block d-xl-block" >
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6  col-xl-6 py-3 d-none  d-sm-block d-md-block d-lg-block d-xl-block" >
 
-                        <h1 class="text-white monserratSemiBold"> Agendar <br> una reunión </h1>
+                        <h1 class="text-white monserratSemiBold text-md-center"> Agendar <br> una reunión </h1>
                     
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  col-xl-6 py-3 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none" >
