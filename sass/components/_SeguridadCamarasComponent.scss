@@ -2,7 +2,31 @@
     padding: 0px 0px 0px 60px ;
 }
 
+.seguridad-camaras-component-title-item{
+    font-size: 30px;
+    padding: 0px 50px 0px 0px;
+}
 
+.seguridad-camaras-component-title-item-text{
+    width:100% ;
+    font-size: 32px;
+}
+
+.seguridad-camaras-component-item-number {
+    font-size: 50px;
+}
+
+.seguridad-camaras-component-margin{
+    padding-bottom: 220px  ;
+    padding-top: 100px  ;
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { 
+    .seguridad-camaras-component-item-number{
+        font-size: 35px;
+    }
+}   
 
 @media (max-width: 480px) {  
 
@@ -15,7 +39,28 @@
     }
 
     .seguridad-camaras-component-title-item{
-        font-size: 22px;
+        font-size: 19px;
+        padding: 0px;
+
+    }
+
+    .seguridad-camaras-component-title-item-text{
+        width: max-content ;
+        font-size: 25px;
+    }
+
+    .seguridad-camaras-component-margin{
+        padding-bottom: 80px  ;
+        padding-top: 30px  ;
+    
+    } 
+
+    .seguridad-camaras-component-title{
+        font-size:22px ;
+    }
+
+    .seguridad-camaras-component-item-number{
+        font-size: 35px;
     }
 
 }

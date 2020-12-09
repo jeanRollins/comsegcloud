@@ -132,16 +132,16 @@ Vue.component('header-component', {
                 <nav class="header-component w-100">
 
                     <div class="container myContainer monserratLight" >
-                        <div class="row"> 
-                            <div class="col-6"> 
+                        <div class="row verticalAlignEndMedium" > 
+                            <div class=" col-6  "> 
                                 <a href="/" class="link">
                                     <img class="header-component-logo" src="../../assets/logos/Imagotipo vectorial_ COMSEG_page-0001.jpg"  > 
                                 </a>
                             </div> 
-                            <div class="col-xs-3  mt-3 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">   
-                                <a href="tel:+569 23274 6200" class="link fontSizeSmall monserratLight"> +569 23274 6200 </a>
+                            <div class="col-xs-3  mt-3 d-block d-xs-block d-sm-block d-md-block d-lg-none d-xl-none">   
+                                <a href="tel:+569 23274 6200" class="link fontSizeSmall monserratLight header-component-phone"> +569 23274 6200 </a>
                             </div> 
-                            <div class="col ml-1 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none mt-3">   
+                            <div class="col ml-1 d-block d-xs-block d-sm-block d-md-block d-lg-none d-xl-none mt-3 text-md-center">   
                                 <menu-component>  </menu-component>
                             </div> 
                             <div class="col alignItemsEnd mb-3 d-none  d-sm-block d-md-none d-lg-block d-xl-block">

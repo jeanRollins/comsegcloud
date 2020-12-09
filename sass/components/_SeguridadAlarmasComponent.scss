@@ -4,12 +4,30 @@
 }
 
 .seguridad-alarmas-component-item{
-    padding: 0px 0px 0px 50px ;
+    padding: 10px 60px 15px 50px ;
     line-height: 1.7;
 }
 
+.seguridad-alarmas-component-item-margin{
+    padding: 50px 20px 0px 20px ;
+}
 
+@media (min-width: 768px) and (max-width: 1199px) { 
+    .seguridad-alarmas-component-item-title{
+        h2{
+            font-size: 25px ;
+        }
+    }
 
+    .seguridad-alarmas-component-item-title {
+        padding: 0px 0px 0px 40px;
+    }
+
+    .seguridad-alarmas-component-item {
+        padding: 10px 10px 15px 40px;
+        line-height: 1.7;
+    }
+}   
 
 @media (max-width: 480px) {  
 
@@ -17,14 +35,17 @@
         font-size: 26px;
     }
 
-    .seguridad-alarmas-component-item ,
+    .seguridad-alarmas-component-item {
+        padding: 10px 0px 0px 20px ;
+    }
     .seguridad-alarmas-component-item-title{
         padding: 0px 0px 0px 20px ;
+        border-left: 2px solid $colorPrimary ;
     }
 
     .seguridad-alarmas-component-item-title{
         h2{
-            font-size: 25px ;
+            font-size: 21px ;
         }
     }
 }

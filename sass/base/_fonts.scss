@@ -14,6 +14,11 @@
     font-family: 'Montserrat-SemiBold' ;
 }
 
+@font-face {
+    src: url( '../fonts/Montserrat-Bold.ttf' )  ;
+    font-family: 'Montserrat-Bold' ;
+}
+
 
 
 .monserratLight{
@@ -28,3 +33,6 @@
     font-family: 'Montserrat-SemiBold' ;
 }
 
+.monserratBold{
+    font-family: 'Montserrat-Bold' ;
+}

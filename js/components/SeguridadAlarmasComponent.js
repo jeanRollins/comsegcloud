@@ -6,24 +6,24 @@ Vue.component( 'seguridad-alarmas-component' , {
     },
     template : /*html*/`
         <div class="container">
-            <div class="row titlePadding mt-4">
+            <div class="row titlePadding ">
                 <div class="col">
-                    <h2 class="textPrimary monserratSemiBold text-xl-center text-lg-center seguridad-alarmas-component-title"> Sistemas de alarmas </h2>
+                    <h2 class="textPrimary monserratSemiBold text-xl-center text-md-center text-lg-center titleMargin"> Sistemas de alarmas </h2>
                 </div>
             </div>
 
-            <div class="row mt-5 p-2">
+            <div class="row ">
                 <div class="col ">
-                    <img src="/assets/images/shutterstock_748406023.jpg" class="w-100 h-75" >
+                    <img src="/assets/images/seguridad/alarmas_principal.png" class="w-100 h-100" >
 
                 </div>
             </div>
 
-            <div class="row monserratLight">
+            <div class="row monserratLight marginBottom fontSizeMedium seguridad-alarmas-component-item-margin">
                 
-                <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6 mt-5">
                     <div class=" seguridad-alarmas-component-item-title">
-                        <h2 class="textPrimary monserratSemiBold "> Sistemas inteligentes </h2>
+                        <h2 class="textPrimary monserratBold "> Sistemas <br/> inteligentes </h2>
                     </div>
                     <p class="seguridad-alarmas-component-item ">
                         Los sistemas de alarmas inteligentes están compuestos por una comnincación de productos de seguridad que pueden controlar de 
@@ -32,9 +32,9 @@ Vue.component( 'seguridad-alarmas-component' , {
                     </p>
                 </div>
 
-                <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6 mt-5">
                     <div class="seguridad-alarmas-component-item-title">
-                        <h2 class="textPrimary monserratSemiBold "> Encuentra la mejor solución </h2>
+                        <h2 class="textPrimary monserratBold "> Encuentra <br/> la mejor solución </h2>
                     </div>
                     <p class="seguridad-alarmas-component-item">
                         Existen sensores de humo, gases, temperatura, humedad, agua entre otros, que pueden generar acciones como habilitación 

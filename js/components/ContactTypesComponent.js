@@ -15,7 +15,7 @@ Vue.component( 'contact-types-component', {
                 {
                     title : 'Llámanos' ,
                     file  : '../../assets/icons/cellphone.svg' ,
-                    description : "Lunes a viernes 09:00 a 18:00 hrs. +562 32746200" 
+                    description : "Lunes a viernes 09:00 a 18:00 hrs. <br/> +562 32746200" 
                 }
             ]
         }
@@ -30,15 +30,15 @@ Vue.component( 'contact-types-component', {
             <div class="container ">
                 <div class="row text-center " >
 
-                    <div class="col my-5 textGray"  >
-                        <h3 class="monserratSemiBold"> Estamos aquí para ayudarte </h3>
+                    <div class="col  textGray"  >
+                        <h3 class="monserratBold titleMargin acronis-component-contact-item-title"> Estamos aquí para ayudarte </h3>
                     </div>
                 
                 </div>
 
-                <div class="row h-100 monserratSemiBold" >
+                <div class="row h-100 monserratSemiBold marginBottom" >
 
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 " v-for="contact in contacts" >
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 " v-for="contact in contacts" >
                         <div  class=" card w-100 noBorder centerItems acronis-component-background textGray " >
 
                             <div class="borderCircle ">
@@ -47,7 +47,7 @@ Vue.component( 'contact-types-component', {
                             
                             <div class="card-body text-center">
                                 <h5 class="card-title textPrimary font-weight-bold">{{ contact.title }}</h5>
-                                <p class="fontSizeMedium"> {{ contact.description  }} </p>
+                                <p class="fontSizeMedium" v-html="contact.description">  </p>
                             </div>
                         
 

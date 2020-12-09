@@ -2,11 +2,53 @@
     font-size: 60px;
 }
 
-.seguridad-contador-component-item-padding{
-    padding: 0px 20px 0px 20px; ;
+.seguridad-contador-component-item-left{
+    padding: 0px 80px 0px 0px; ;
 }
 
+.seguridad-contador-component-item-right{
+    padding: 0px 0px 0px 80px; ;
+}
 
+.seguridad-contador-component-margin-content{
+    padding: 100px 0px 200px 0px ;
+}
+
+.seguridad-contador-component{
+    height: 283px;
+    background-image: url(/assets/images/seguridad/contadores.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 1267px 627px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { 
+    
+    .seguridad-contador-component-title-secondary{
+        font-size: 43px;
+
+    }
+
+    
+    .seguridad-contador-component-item-left {
+        padding: 0px 30px 0px 20px;
+    }
+
+    .seguridad-contador-component-item-right {
+        padding: 0px 20px 0px 50px;
+    }
+
+    .seguridad-contador-component-margin-title {
+        padding: 40px 0px 30px 0px;
+    }
+
+    .seguridad-contador-component-margin-content {
+        padding: 120px 0px 150px 0px;
+    }
+
+  
+}   
 
 @media (max-width: 480px) {  
 
@@ -14,5 +56,28 @@
         font-size: 37px;
     }
 
-    
+    .seguridad-contador-component-item-left ,
+    .seguridad-contador-component-item-right {
+        padding : 0px 25px 0px 25px ;
+    }
+
+    .seguridad-contador-component-title-secondary {
+        margin-bottom: 40px ;
+        width : 80% ;
+        font-size: 50px;
+    }
+
+    .seguridad-contador-component-title{
+        font-size: 27px ;
+    }
+
+    .seguridad-contador-component{
+        height: 250px;
+        background-size: 600px 476px;
+    }
+
+    .seguridad-contador-component-margin-content{
+        padding: 50px 0px 100px 0px ;
+    }
+
 }

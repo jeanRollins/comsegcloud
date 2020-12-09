@@ -1,5 +1,5 @@
 .footer-component {
-    height: 200px;
+    padding : 50px 0px 50px 0px  ;
     background-color: $colorDark;
 }
 
@@ -27,10 +27,37 @@
     height: 35px;
 }
 
+.footer-component-contact-text{
+    font-size:11px
+}
+
+.footer-component-text-contact{
+    width: 48% ;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {  
+
+    .footer-component-contact-icon{
+        width: 30px;
+        height: 30px;
+     }
+
+     .footer-component-icon{
+        height: 15px;
+    }
+
+    .footer-component-contact-text{
+        font-size: 8px ;
+    }
+    .footer-component-text-contact{
+        width: 100% ;
+    }
+}   
+
 @media (max-width: 480px) {  
 
     .footer-component {
-        height: 100% !important;
+        padding : 30px 0px 30px 30px  ;
         background-color: $colorDark;
     }
 
@@ -39,13 +66,21 @@
     }
 
     .footer-component-contact-icon{
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 
     .footer-component-icon{
-        width: 19px;
-        height: 18px;
+        width: 21px;
+        height: 23px;
+    }
+
+    .footer-component-contact-text {
+        font-size: 14px;
+    }
+
+    .footer-component-text-contact{
+        width: 100% ;
     }
 }
 

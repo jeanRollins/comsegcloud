@@ -8,9 +8,86 @@
 }
 
 .seguridad-control-acceso-component-item-title{
-    width: 75% ;
+    width: 68% ;
 }
 
+.seguridad-control-acceso-component-title{
+    padding: 0px 0px 80px 0px ;
+}
+
+.seguridad-control-acceso-component-padding-text{
+    padding: 0px 10px 0px 40px ;
+}
+
+
+.seguridad-control-acceso-component-item-img{
+    height: 100px;
+    width: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.seguridad-control-acceso-component-image{
+    height: 320px;
+    background-image: url(/assets/images/seguridad/shutterstock_1033910839.jpg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 640px 320px;
+}
+
+.seguridad-control-acceso-component-text-item{
+    width: 90%;
+    font-size: 12px;
+}
+
+.seguridad-control-acceso-component-item-number{
+    font-size: 40px;
+}
+.seguridad-control-acceso-component-item-title{
+    width: 100% ;
+    font-size: 22px ;
+}
+
+.seguridad-control-acceso-title{
+    font-size: 32px ;
+}
+
+.seguridad-control-acceso-component-title-secondary{
+    font-size: 28px ;
+}
+
+.seguridad-control-acceso-title-third{
+    padding : 80px 115px 55px 92px  ;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { 
+
+    .seguridad-control-acceso-component-text-item {
+        width: 95%;
+    }
+
+    .seguridad-control-acceso-component-image{
+        height: 326px ;
+        background-size: 417px 390px;
+    }
+
+    .seguridad-control-acceso-component-title-secondary{
+        font-size: 15px
+    }
+    .seguridad-control-acceso-title-third{
+        padding : 35px 41px 34px 15px ;
+        h4{
+
+            font-size: 18px ;
+        }
+    }
+
+    .seguridad-control-acceso-component-item-img{
+        width: 86% ;
+    }
+
+}
 
 @media (max-width: 480px) {  
 
@@ -20,14 +97,54 @@
     }
 
     .seguridad-control-acceso-component-padding-text{
-        padding: 0px 30px 0px 0px ;
+        padding: 0px 20px 0px 30px ;
     }
 
-    .seguridad-control-acceso-component-item-number{
-        font-size: 40px;
+    .seguridad-control-acceso-component-padding-text{
+        padding: 0px 20px 0px 30px ;
     }
-    .seguridad-control-acceso-component-item-title{
-        width: 100% ;
-        font-size: 22px ;
+
+    .seguridad-control-acceso-component-item-img{
+        height: 220px !important;
     }
+
+    .seguridad-control-acceso-component-image1{
+        background-size: 560px 291px !important;
+        background-position-x: -48px !important;
+        background-position-y: -71px !important;        
+    }
+
+    .seguridad-control-acceso-component-image2{
+        background-size: 609px 360px !important;
+        background-position-x: -144px !important;
+        background-position-y: -36px !important;    
+    }
+
+    .seguridad-control-acceso-component-image3{
+        background-size: 547px 242px !important;
+        background-position-x: -39px !important;
+        background-position-y: -13px !important;    
+    }
+
+    .seguridad-control-acceso-component-margin{
+        margin-bottom:20px ;
+    }
+
+    .seguridad-control-acceso-title {
+        font-size: 17px;
+    }
+
+    .seguridad-control-acceso-title-third{
+        padding : 30px 0px 37px 0px  ;
+
+        h4{
+            font-size: 21px !important;
+            line-height: 1.5;
+        }
+    }
+    
 }
+
+
+
+

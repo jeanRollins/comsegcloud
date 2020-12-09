@@ -7,21 +7,93 @@
     padding: 0px 100px 0px 100px ;
 }
 
-.soporte-component-title-principal{
-    text-align: center;
-}
-
-.soporte-component-description{
-    text-align: center;
-    line-height: 1.7;
-}
 
 .soporte-component-padding-description{
     padding: 0px 30px 0px 30px ;
 }
 
-@media (max-width: 480px) {  
+.soporte-component-item-margin-top{
+    margin-top: 80px !important;
+}
+.soporte-component-item{
+    margin: 60px 0px 0px 0px ;
+}
+.soporte-component-title-margin-top{
+    margin-top: 100px ;
+}
+.soporte-component-item-padding{
+    padding: 0px 25px 0px 25px ;
+}
 
+.soporte-component-item-padding-left{
+    padding: 0px 0px 0px 15px ;
+}
+
+.soporte-component-title-item-list-padding{
+    padding: 0px 25px 0px 25px ;       
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { 
+    .soporte-component-title-margin-top {
+        margin-top: 70px;
+    }
+
+    .soporte-component-padding-image1{
+        height: 400px ;
+    }
+
+    .soporte-component-padding-image2{
+        height: 282px !important ;
+    }
+    .soporte-component-padding-image3{
+        height: 320px !important;
+    }
+
+    .soporte-component-padding {
+        padding: 0px 10px 0px 10px;
+    }
+    .soporte-component-title-principal{
+        font-size: 22px;
+    }
+
+    .soporte-component-title{
+        font-size: 14px;
+    }
+
+    .soporte-component-title-item-list-padding{
+        font-size: 10px;   
+    }
+    .soporte-component-padding-description{
+        font-size: 10px;
+    }
+
+}   
+
+@media (max-width: 480px) {  
+    .soporte-component-title-item-list-padding{
+        padding: 0px 0px 0px 0px ;       
+
+    }
+
+    .soporte-component-item-padding-left{
+        padding: 0px 0px 0px 7px ;
+    }
+
+    .soporte-component-number-title {
+        font-size: 56px;
+    }
+
+    .soporte-component-item-padding{
+        padding: 0px ;
+    }
+
+    .soporte-component-title-margin-top{
+        margin-top: 20px ;
+    }
+    .soporte-component-title-principal {
+        line-height: 1.5;
+    }
+    
     .soporte-component-padding{
         padding: 0px 10px 0px 10px ;
     }
@@ -43,7 +115,7 @@
     }
 
     .soporte-component-padding-description{
-        padding: 0px 10px 0px 10px ;
+        padding: 0px ;
         li{
             font-size: 13px;
         }
