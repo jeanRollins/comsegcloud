@@ -133,7 +133,7 @@ Vue.component('header-component', {
 
                     <div class="container myContainer monserratLight" >
                         <div class="row verticalAlignEndMedium" > 
-                            <div class=" col-6  "> 
+                            <div class="col-5  "> 
                                 <a href="/" class="link">
                                     <img class="header-component-logo" src="../../assets/logos/Imagotipo vectorial_ COMSEG_page-0001.jpg"  > 
                                 </a>
@@ -142,7 +142,9 @@ Vue.component('header-component', {
                                 <a href="tel:+569 23274 6200" class="link fontSizeSmall monserratLight header-component-phone"> +569 23274 6200 </a>
                             </div> 
                             <div class="col ml-1 d-block d-xs-block d-sm-block d-md-block d-lg-none d-xl-none mt-3 text-md-center">   
-                                <menu-component>  </menu-component>
+                                <div class="float-sm-right ">
+                                    <menu-component>  </menu-component>
+                                </div>
                             </div> 
                             <div class="col alignItemsEnd mb-3 d-none  d-sm-block d-md-none d-lg-block d-xl-block">
                                 <div class="container h-100" >
@@ -151,16 +153,16 @@ Vue.component('header-component', {
                                         <div class="col-7  ">   
                                             <div class="container " >
                                                 <div class="row "> 
-                                                    <div class="col"> <a href="/" class = "link"> Inicio    </a> </div>             
-                                                    <div class="col"> <a href="/" class = "link"> Nosotros  </a> </div> 
-                                                    <div class="col"> <a href="/" class = "link"> Servicios </a> </div> 
-                                                    <div class="col"> <a href="/contacto.html" class = "link"> Contacto  </a> </div>
+                                                    <div class="col"> <a href="/" class = "link header-component-link monserratRegular"> Inicio    </a> </div>             
+                                                    <div class="col"> <a href="/" class = "link header-component-link monserratRegular"> Nosotros  </a> </div> 
+                                                    <div class="col"> <a href="/" class = "link header-component-link monserratRegular"> Servicios </a> </div> 
+                                                    <div class="col"> <a href="/contacto.html" class = "link header-component-link monserratRegular"> Contacto  </a> </div>
                                                 </div>
                                             </div>
                                         </div> 
 
                                         <div class="col text-white"> 
-                                           <span class=""> Llámanos al </span>   <a href="tel:+569 23274 6200" class="link monserratSemiBold"> +569 23274 6200 </a>
+                                           <span class="header-component-link "> Llámanos al </span>   <a href="tel:+569 23274 6200" class="link monserratSemiBold fontSizeMedium"> +569 23274 6200 </a>
                                         </div> 
 
                                     </div>

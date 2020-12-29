@@ -1,5 +1,5 @@
 .header-component{
-    height: 125px;
+    height: 100px;
     width: 100%;
     background-color: $colorPrimary;
 }
@@ -21,16 +21,62 @@
     width: 18%;
 }
 
+.arriendo-equipos-components-title {
+    font-size: 30px !important;
+    padding: 23px 50px !important;;
+}
 
 
-@media (min-width: 1200px) { }   
+
+@media (min-width: 1024px ) and ( max-width: 1366px ) {  
+
+    .header-component-subheader-icon-image{
+        width: 20% !important;
+    }
+
+    .header-component-logo {
+        width: 62% !important;
+    }
+
+    .header-component-subheader-link {
+        font-size: 10px;
+        display: flex;
+        div{
+            margin : 7px 0px 0px 0px;
+        }
+    }
+
+    .header-component-subheader {
+        height: 56px;
+    }
+
+    .header-component-link{
+        font-size: 10px
+    }
+
+    .arriendo-equipos-components-title {
+        font-size: 30px !important;
+        padding: 23px 50px !important;
+    }
+
+    .arriendo-equipos-components-padding {
+        padding: 0px 100px !important;
+    }
+
+
+        
+}   
    
 /* Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */
-@media (min-width: 768px) and (max-width: 1199px) {  
+@media (min-width: 768px) and (max-width: 1024px) {  
+
+    .header-component{
+        height: 85px;
+    }
 
     .header-component-subheader-icon-image{
-        width: 42% ;
+        width: 36% ;
     }
 
     .header-component-logo {
@@ -54,6 +100,11 @@
     }
 
     .header-component-logo{
-        width : 76% !important ;
+        width : 95% !important ;
+    }
+
+
+    .header-component-subheader {
+        height: 55px;
     }
 }
