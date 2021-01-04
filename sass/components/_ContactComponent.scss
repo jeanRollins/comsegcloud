@@ -6,9 +6,17 @@
     float: right;
 }
 
+.contact-component-padding{
+    padding: 0px 42px ;
+}
+
 @media (max-width: 480px) {  
 
     .contact-component-field{
         float: none ;
+    }
+
+    .contact-component-padding{
+        padding: 0px 20px ;
     }
 }
