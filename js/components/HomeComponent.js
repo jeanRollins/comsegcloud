@@ -7,19 +7,19 @@ Vue.component('home-component', {
         slideItems : [
           [
             {  
-              file        : '/assets/images/slide/shutterstock_767544493.jpg' ,
+              file        : '/assets/images/slide_carousel/shutterstock_767544493.jpg' ,
               title       : 'Comseg CybertProtect' ,
               description : 'Seguridad, Protección y Gestión' ,
               url         : '/cyberprotect.html'
             },
             {  
-              file        : '/assets/images/slide/shutterstock_367136834.jpg' ,
+              file        : '/assets/images/slide_carousel/shutterstock_367136834.jpg' ,
               title       : 'Desarrollo de Sistemas' ,
               description : 'E-commerce y más' ,
               url         : '/desarrollo_sistema.html'
             },
             {  
-              file        : '/assets/images/slide/shutterstock_1393698617.jpg' ,
+              file        : '/assets/images/slide_carousel/shutterstock_212704252.jpg' ,
               title       : 'Seguridad y protección' ,
               description : 'Inteligencia y negocio' ,
               url         : '/seguridad.html'
@@ -27,19 +27,19 @@ Vue.component('home-component', {
           ],
           [
             {  
-              file        : '/assets/images/slide/shutterstock_1236017206.jpg' ,
+              file        : '/assets/images/slide_carousel/shutterstock_1236017206.jpg' ,
               title       : 'Comseg CybertProtect' ,
               description : 'Seguridad, Protección y Gestión' ,
               url         : '/soporte.html'
             },
             {  
-              file        : '/assets/images/slide/shutterstock_1278039331.jpg' ,
+              file        : '/assets/images/slide_carousel/shutterstock_1278039331.jpg' ,
               title       : 'Seguridad y protección' ,
               description : 'E-commerce y más' ,
               url         : '/redes.html'
             },
             {  
-              file        : '/assets/images/slide/shutterstock_1393698617.jpg' ,
+              file        : '/assets/images/slide_carousel/shutterstock_1393698617.jpg' ,
               title       : 'Desarrollo de Sistemas' ,
               description : 'Seguridad, Protección y Gestión' ,
               url         : '/arriendo_equipos.html'
