@@ -26,6 +26,11 @@
 .redes-component-card-mbottom{
     margin-bottom: 170px ;
 }
+.redes-component-marquee{
+    font-size: 105px;
+    position: absolute;
+    top: 763px;
+}
 
 @media (min-width: 1024px ) and ( max-width: 1366px ) {  
     
@@ -42,7 +47,12 @@
         margin-bottom: 100px !important;
     }
 
+    .redes-component-marquee {
+        font-size: 85px !important;
+        top: 700px !important;
+    }
 }   
+
    
 @media (min-width: 768px) and (max-width: 1024px) {  
 
@@ -75,6 +85,11 @@
     .redes-component-title {
         margin: 30px 0px 0px 0px;
     }
+
+    .redes-component-marquee {
+        font-size: 85px;
+        top: 583px;
+    }
 }   
 
 @media (max-width: 480px) {  
@@ -104,6 +119,10 @@
 
     .redes-component-description{
         font-size: 15px;
+    }
+
+    .redes-component-marquee{
+        display: none;
     }
 
 }
