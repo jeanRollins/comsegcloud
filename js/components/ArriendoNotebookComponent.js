@@ -11,6 +11,7 @@ Vue.component( 'arriendo-notebook-component' , {
             ],
             notebooks : [
                 {
+                    class : '' ,
                     title : '' ,
                     file : '/assets/images/notebook_gama_baja.png' ,
                     descriptions:[
@@ -21,6 +22,7 @@ Vue.component( 'arriendo-notebook-component' , {
                     ]
                 },
                 {
+                    class : '' ,
                     title : '' ,
                     file : '/assets/images/notebook_gama_media.png' ,
                     descriptions:[
@@ -31,6 +33,7 @@ Vue.component( 'arriendo-notebook-component' , {
                     ]
                 },
                 {
+                    class : 'arriendo-equipos-components-mbottom' ,
                     title : '' ,
                     file : '/assets/images/notebook_gama_alta.png' ,
                     descriptions:[
@@ -57,13 +60,13 @@ Vue.component( 'arriendo-notebook-component' , {
         }
     },
     template : /*html*/ `
-        <div class="container monserratLight">
-            <div class="row">
+        <div class="container monserratRegular myContainerMD textGray">
+            <div class="row arriendo-equipos-components-padding">
                 <div class="col ">
                     <h1 class="d-none d-md-block d-lg-block d-xl-block textPrimary monserratSemiBold my-5"> Equipos </h1>
                     
                     <a 
-                        class="d-block d-lg-none d-xl-none  arriendo-notebook-component-btn-collapse text-white text-decoration-none"
+                        class="d-block  d-md-none d-lg-none d-xl-none  arriendo-notebook-component-btn-collapse text-white text-decoration-none"
                         data-toggle="collapse" 
                         href="#collapseExample" 
                         role="button" 
@@ -79,21 +82,24 @@ Vue.component( 'arriendo-notebook-component' , {
             
             </div>
 
-            <div class="row">
+            <div class="row arriendo-equipos-components-padding">
                 
-                <div id="collapseExample" class="collapse col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 show">
+                <div id="collapseExample" class="mb-5 collapse col-xs-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 show">
                     
                     <ul >
-                        <li v-for="item in items" > {{ item }} </li>
+                        <li v-for="item in items" class="my-3"> {{ item }} </li>
                     </ul>
 
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 monserratBlack">
-                    <h4 class="textGray "> Notebook </h4>
-                    <p class="textGray "> Características de equipos en arriendo </p>
+                <div class="arriendo-equipos-components-mtop col-xs-12 col-sm-12 col-md-6 col-lg-7 col-xl-7 offset-md-1 offset-lg-1 ">
+                    <h4 class=" "> Notebook </h4>
+                    <p class=" "> Características de equipos en arriendo </p>
                     
-                    <div v-for="notebook in notebooks" class="my-5" >
+                    <div v-for="notebook in notebooks" 
+                         class="my-5" 
+                         :class="notebook.class" 
+                    >
                         <img :src="notebook.file" class="img-fluid" />
                         <ul class="list-unstyled mt-4">
                             <li v-for="description in notebook.descriptions"> {{ description }} </li>

@@ -26,19 +26,19 @@ Vue.component( 'redes-wan-component' , {
     },
     template : /*html*/ `
         <div class="container  monserratLight">
-            <div class="row my-5">
-                <div class="col titlePadding">
-                    <h3 class=" monserratSemiBold textGray text-xl-center text-lg-center">
+            <div class="row ">
+                <div class="col ">
+                    <h3 class="redes-wan-component-title monserratSemiBold textGray text-xl-center text-lg-center text-md-center">
                         Redes por software <span class="textPrimary "> SD-Wan </span>
                     </h3>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col titlePadding text-xl-center text-lg-center ">
-                    <p class=" fontSizeLarge">
+                <div class="col redes-wan-component-title-padding text-xl-center text-lg-center text-md-center">
+                    <p class=" redes-wan-component-description">
                         Con SD-Wan podrá gestionar y controlar de forma centralizada todos los componentes de Red a través de 
-                        software, y todo ello de una manera sencilla. <br>
+                        software, y todo ello de una manera sencilla. <br />
                         Una de las claves de SD-WAN es poder permitir a las empresas construir su WAN a medida, pagando por 
                         lo que se necesita realmente.
                     </p>
@@ -51,15 +51,15 @@ Vue.component( 'redes-wan-component' , {
                 </div>
             </div>
 
-            <div class="row my-5">
+            <div class="row redes-wan-component-title-margin">
                 <div class="col titlePadding">
-                    <h3 class=" monserratSemiBold textGray text-xl-center text-lg-center">
+                    <h3 class=" monserratSemiBold textGray text-xl-center text-lg-center text-md-center">
                         Ventajas de <span class="textPrimary "> SD-WAN </span>
                     </h3>
                 </div>
             </div>
 
-            <div class="row my-5">
+            <div class="row redes-wan-component-mbottom">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 border-left redes-wan-component-item" v-for="item in ventajas">
                     <h3 class="redes-wan-component-item-number monserratSemiBold textPrimary px-3 "> {{ item.number }}. </h3>
                     <h3 class="redes-wan-component-item-title monserratSemiBold textGray  px-3"> {{ item.title }} </h3>

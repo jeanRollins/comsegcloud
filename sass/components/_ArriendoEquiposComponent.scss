@@ -1,6 +1,4 @@
-.arriendo-equipos-components-padding{
-    padding: 0px 200px ;
-}
+
 
 .arriendo-equipos-components-title-item{
     font-size: 40px;
@@ -38,6 +36,23 @@
     margin: 150px 0px 300px 0px ;
 }
 
+.arriendo-equipos-components-mbottom{
+    margin-bottom: 300px !important;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {  
+    .arriendo-equipos-components-padding {
+        padding: 0px 45px !important;
+    }
+
+    .arriendo-equipos-components-mbottom{
+        margin-bottom: 200px !important;
+    }
+
+}   
+
+
 
 @media ( max-width: 480px ) {  
 
@@ -48,7 +63,8 @@
     .arriendo-equipos-components-title{
         font-size: 20px;
         line-height: 1.4;
-        padding: 0px;
+        font-size: 24px !important;
+        padding: 23px 0px !important;
     }
 
     .arriendo-equipos-components-title-item{
@@ -65,6 +81,10 @@
         height: 100%;
     }
 
+    .arriendo-equipos-components-mtop{
+        margin-top: 30px ;
+    }
+
     .arriendo-equipos-component-title-width1 {
         width: 26%;
     }
@@ -75,5 +95,9 @@
 
     .arriendo-equipos-components-margin-top2 {
         margin: 100px 0px 140px 0px;
+    }
+
+    .arriendo-equipos-components-mbottom{
+        margin-bottom: 100px !important;
     }
 }

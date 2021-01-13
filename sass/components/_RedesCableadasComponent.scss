@@ -3,12 +3,45 @@
 }
 
 .redes-cableadas-title{
-    margin: 30px 0px 20px 0px ;
+    margin: 30px 0px;
+}
+.redes-cableadas-mbottom{
+    margin-bottom: 150px ;
 }
 
 .redes-cableadas-component-description{
     line-height: 1.8;
+    font-size: 15.8px;
 }
+
+.redes-cableadas-mtop{
+    margin-top: 65px ;
+}
+
+@media (min-width: 1024px ) and ( max-width: 1366px ) {  
+
+    .redes-cableadas-mtop{
+        margin-top: 10px ;
+    }
+}   
+   
+@media (min-width: 768px) and (max-width: 1024px) {  
+
+    .redes-cableadas-component-padding {
+        padding: 0px 50px ;
+    }
+    .redes-cableadas-component-padding-img{
+        padding: 0px 50px ;
+    }
+    .redes-cableadas-mbottom {
+        margin-bottom: 85px;
+    }
+
+    .redes-cableadas-mtop{
+        margin-top: 24px ;
+    }
+}   
+
 
 @media (max-width: 480px) {  
 
@@ -18,6 +51,17 @@
 
     .redes-cableadas-component-description{
         font-size: 15px;
-   }
+    }
 
+    .redes-cableadas-title {
+        margin: 15px 0px;
+    }
+
+    .redes-cableadas-mbottom {
+        margin-bottom: 80px;
+    }
+
+    .redes-cableadas-mtop{
+        margin-top: 10px ;
+    }
 }

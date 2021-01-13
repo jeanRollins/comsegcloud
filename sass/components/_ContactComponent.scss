@@ -10,6 +10,13 @@
     padding: 0px 42px ;
 }
 
+
+@media (min-width: 768px) and (max-width: 1024px) {  
+
+    .contact-component-map-size{
+        width: 87% !important;
+    }
+}   
 @media (max-width: 480px) {  
 
     .contact-component-field{
@@ -18,5 +25,9 @@
 
     .contact-component-padding{
         padding: 0px 20px ;
+    }
+
+    .contact-component-title-size{
+        font-size: 30px;
     }
 }

@@ -1,7 +1,10 @@
 .redes-component-padding{
-    padding: 0px 150px 0px 150px ;
+    padding: 10px 200px 0px 200px;
 }
 
+.redes-component-mbottom{
+    margin-bottom: 50px ;
+}
 .redes-component-card-image{
     height: 250px;
 }
@@ -9,15 +12,94 @@
     margin: 50px 0px 0px 0px ;
 }
 
+.redes-component-description{
+    font-size: 17px;
+}
+
+.btnRedBlack{
+    background-color: black;
+    border-radius: 20px ;
+    padding: 6px 25px;
+    border: 1px solid black;
+}
+
+.redes-component-card-mbottom{
+    margin-bottom: 170px ;
+}
+
+@media (min-width: 1024px ) and ( max-width: 1366px ) {  
+    
+    .redes-component-title {
+        font-size: 29px !important;
+        line-height: 1.4 !important;
+    }
+
+    .redes-component-description {
+        font-size: 18.3px !important;
+    }
+
+    .redes-component-card-mbottom {
+        margin-bottom: 100px !important;
+    }
+
+}   
+   
+@media (min-width: 768px) and (max-width: 1024px) {  
+
+    .redes-component-padding {
+        padding: 10px 70px 0px 70px;
+    }
+
+    .redes-component-description {
+        font-size: 13px;
+    }
+    .redes-component-title {
+        font-size: 20px;
+        line-height: 1.4;
+
+    }
+    .redes-component-mbottom {
+        margin-bottom: 10px;
+    }
+    
+    .redes-component-title-card {
+        font-size: 13px;
+    }
+    .redes-component-title-description {
+        font-size: 12px;
+    }
+    .redes-component-no-padding{
+        padding: 0px ;
+    }
+
+    .redes-component-title {
+        margin: 30px 0px 0px 0px;
+    }
+}   
+
 @media (max-width: 480px) {  
+    
+    .btnRedBlack{
+        margin: 10px 0px ;
+    }
+    
+    
+    .redes-component-mbottom {
+        margin-bottom: 0px;
+    }
 
     .redes-component-padding{
-        padding: 0px 15px 0px 15px ;
+        padding: 0px 25px 0px 25px ;
+    }
+
+    .redes-component-padding-general{
+        padding: 0px 9px 0px 9px ;
     }
 
     .redes-component-title{
         margin: 20px 0px 0px 0px ;
-        font-size: 20px;
+        font-size: 19px;
+        line-height: 1.4;
     }
 
     .redes-component-description{
