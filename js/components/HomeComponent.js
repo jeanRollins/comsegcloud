@@ -28,20 +28,20 @@ Vue.component('home-component', {
           [
             {  
               file        : '/assets/images/slide_carousel/shutterstock_1236017206.jpg' ,
-              title       : 'Comseg CybertProtect' ,
-              description : 'Seguridad, Protección y Gestión' ,
+              title       : 'Soporte TI' ,
+              description : 'Servicios de soporte' ,
               url         : '/soporte.html'
             },
             {  
-              file        : '/assets/images/slide_carousel/shutterstock_1278039331.jpg' ,
-              title       : 'Seguridad y protección' ,
-              description : 'E-commerce y más' ,
+              file        : '/assets/images/slide_carousel/shutterstock_1393698617.jpg' ,
+              title       : 'Redes' ,
+              description : 'Redes y tipos de redes' ,
               url         : '/redes.html'
             },
             {  
-              file        : '/assets/images/slide_carousel/shutterstock_1393698617.jpg' ,
-              title       : 'Desarrollo de Sistemas' ,
-              description : 'Seguridad, Protección y Gestión' ,
+              file        : '/assets/images/slide_carousel/shutterstock_1278039331.jpg' ,
+              title       : 'Arriendo de equipos' ,
+              description : 'Arriendo de notebooks y más' ,
               url         : '/arriendo_equipos.html'
             } 
           ]

@@ -142,21 +142,21 @@ Vue.component('header-component', {
                                 <a href="tel:+569 23274 6200" class="link fontSizeSmall monserratLight header-component-phone"> +569 23274 6200 </a>
                             </div> 
                             <div class="col ml-1 d-block d-xs-block d-sm-block d-md-block d-lg-none d-xl-none mt-3 text-md-center">   
-                                <div class="float-sm-right ">
+                                <div class="header-component-menu-float">
                                     <menu-component>  </menu-component>
                                 </div>
                             </div> 
-                            <div class="col alignItemsEnd mb-3 d-none  d-sm-block d-md-none d-lg-block d-xl-block">
+                            <div class="col alignItemsEnd d-none  d-sm-block d-md-none d-lg-block d-xl-block">
                                 <div class="container h-100" >
-                                    <div class="row h-100 align-items-end"> 
+                                    <div class="row h-100 align-items-end "> 
                                         
                                         <div class="col-7  ">   
                                             <div class="container " >
-                                                <div class="row "> 
-                                                    <div class="col"> <a href="/" class = "link header-component-link monserratRegular"> Inicio    </a> </div>             
-                                                    <div class="col"> <a href="/" class = "link header-component-link monserratRegular"> Nosotros  </a> </div> 
-                                                    <div class="col"> <a href="/" class = "link header-component-link monserratRegular"> Servicios </a> </div> 
-                                                    <div class="col"> <a href="/contacto.html" class = "link header-component-link monserratRegular"> Contacto  </a> </div>
+                                                <div class="row"> 
+                                                    <div class="col p-0"> <a href="/" class = "link header-component-link monserratRegular"> Inicio    </a> </div>             
+                                                    <div class="col p-0"> <a href="/" class = "link header-component-link monserratRegular"> Nosotros  </a> </div> 
+                                                    <div class="col p-0"> <a href="/" class = "link header-component-link monserratRegular"> Servicios </a> </div> 
+                                                    <div class="col p-0"> <a href="/contacto.html" class = "link header-component-link monserratRegular"> Contacto  </a> </div>
                                                 </div>
                                             </div>
                                         </div> 
@@ -177,9 +177,9 @@ Vue.component('header-component', {
                 </nav>
                 <div class="header-component-subheader">
                     <div class="container myContainerMD">
-                        <div class="row" >
-                            <div class="col pt-3 " v-for="submenu in submenus">
-                                <a class="text-decoration-none header-component-subheader-link" 
+                        <div class="row header-component-subheader-padding" >
+                            <div class="col">
+                                <a v-for="submenu in submenus" class="text-decoration-none header-component-subheader-link"  
                                     v-on:mouseover="hoverSubmenu( submenu.fileHover , submenu.ref , submenu.href , 'text'+ submenu.ref )"
                                     v-on:mouseleave="leaveSubmenu( submenu.file , submenu.ref , submenu.href , 'text'+ submenu.ref )"
                                     v-on:click=" " 
@@ -189,7 +189,9 @@ Vue.component('header-component', {
                                         :src="submenu.file" 
                                         :id="submenu.ref"
                                         >
-                                    <div :id="'text'+ submenu.ref" class="d-none text-white  d-sm-block d-md-none d-lg-inline-block d-xl-inline-block monserratLight" > {{  submenu.text  }} </div>
+                                    <div :id="'text'+ submenu.ref" class="d-none text-white  d-sm-block d-md-none d-lg-inline-block d-xl-inline-block monserratBlack" > 
+                                        {{  submenu.text  }}
+                                    </div>
                                 </a>
                             </div>
                         </div>

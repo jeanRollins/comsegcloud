@@ -1,5 +1,5 @@
 .footer-component {
-    padding : 50px 0px 50px 0px  ;
+    padding : 0px;
     background-color: $colorDark;
 }
 
@@ -35,6 +35,30 @@
     width: 48% ;
 }
 
+@media (min-width: 1024px ) and ( max-width: 1366px ) {  
+
+    .arriendo-equipos-components-title {
+        font-size: 30px !important;
+        padding: 23px 50px !important;
+    }
+
+    .arriendo-equipos-components-padding {
+        padding: 0px 100px !important;
+    }
+
+ 
+
+        
+}   
+   
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {  
+
+
+  
+}   
+
 @media (min-width: 768px) and (max-width: 1199px) {  
 
     .footer-component-contact-icon{
@@ -51,6 +75,11 @@
     }
     .footer-component-text-contact{
         width: 100% ;
+    }
+
+    .footer-component {
+        padding: 42px 0px ;
+    
     }
 }   
 

@@ -5,20 +5,24 @@
 }
 
 .header-component-logo{
-    width : 41% ;
+    width : 36% ;
 }
 
 .header-component-subheader {
     height: 63px;
     background-color: $colorDark;
+    a {
+        width: 50%;
+        margin : 0px 22px ; 
+    }
 }
 
 .header-component-subheader-link{
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .header-component-subheader-icon-image{
-    width: 18%;
+    width: 3%;
 }
 
 .arriendo-equipos-components-title {
@@ -26,16 +30,19 @@
     padding: 23px 50px !important;;
 }
 
+.header-component-subheader-padding{
+    padding: 13px 0px ;
+}
+.header-component-link{
+    font-size: 18px
+}
 
 
 @media (min-width: 1024px ) and ( max-width: 1366px ) {  
 
-    .header-component-subheader-icon-image{
-        width: 20% !important;
-    }
 
     .header-component-logo {
-        width: 62% !important;
+        width: 50% !important;
     }
 
     .header-component-subheader-link {
@@ -46,12 +53,9 @@
         }
     }
 
-    .header-component-subheader {
-        height: 56px;
-    }
 
     .header-component-link{
-        font-size: 10px
+        font-size: 13px
     }
 
     .arriendo-equipos-components-title {
@@ -63,9 +67,25 @@
         padding: 0px 100px !important;
     }
 
- 
+    .header-component-subheader-icon-image {
+        width: 30px !important;
+    }
+    .header-component-subheader-padding{
+        padding: 10px 20px !important;
+    }
 
-        
+    .header-component-subheader {
+        height: 50px !important;
+        a {
+            margin: 10px 14px !important;
+            display: inline !important;
+        }
+    }
+
+    .header-component-subheader-link{
+        font-size: 10.5px;
+    }
+
 }   
    
 /* Tablets en horizonal y escritorios normales
@@ -76,12 +96,8 @@
         height: 85px;
     }
 
-    .header-component-subheader-icon-image{
-        width: 36% ;
-    }
-
     .header-component-logo {
-        width: 74%;
+        width: 67%;
     }
 
     .header-component-phone{
@@ -90,7 +106,20 @@
     }
 
     .menu-component-size{
-        width: 100%;
+        width: 20%;
+    }
+
+    .header-component-subheader-icon-image {
+        width: 30px;
+    }
+    .header-component-subheader-padding{
+        padding: 10px 20px ;
+    }
+    .header-component-subheader {
+        height: 50px;
+        a {
+            margin : 10px 38px ; 
+        }
     }
 }   
 /* Móviles en horizontal o tablets en vertical
@@ -110,6 +139,22 @@
 
 
     .header-component-subheader {
-        height: 55px;
+        height: 45px;
+    }
+
+    .header-component-subheader-icon-image {
+        width: 8%;
+    }
+    .header-component-subheader {
+        a {
+            margin : 10px 0px 0px 20px ; 
+        }
+    }
+
+    .header-component-subheader-padding{
+        padding: 8px 10px 0px 11px ;
+    }
+    .header-component-menu-float{
+        float: right ;
     }
 }

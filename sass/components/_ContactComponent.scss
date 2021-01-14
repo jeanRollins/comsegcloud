@@ -10,11 +10,27 @@
     padding: 0px 42px ;
 }
 
+.contact-component-mbottom{
+    margin-bottom: 150px ;
+}
+
+@media (min-width: 1024px ) and ( max-width: 1366px ) {  
+
+    .contact-component-mbottom{
+        margin-bottom: 456px !important ;
+    }
+        
+}  
+
 
 @media (min-width: 768px) and (max-width: 1024px) {  
 
     .contact-component-map-size{
         width: 87% !important;
+    }
+
+    .contact-component-mbottom{
+        margin-bottom: 180px ;
     }
 }   
 @media (max-width: 480px) {  
@@ -29,5 +45,9 @@
 
     .contact-component-title-size{
         font-size: 30px;
+    }
+
+    .contact-component-mbottom{
+        margin-bottom: 100px ;
     }
 }

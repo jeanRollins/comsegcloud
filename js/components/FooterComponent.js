@@ -25,7 +25,7 @@ Vue.component( 'footer-component' , {
     template: /*html*/ `
         <div class="footer-component h-100">
             <div class="container myContainer " >
-                <div class="row pb-5">
+                <div class="row">
                     <div class="col-4 d-none  d-sm-block d-md-none d-lg-block d-xl-block">
                         <img src="../../assets/logos/Imagotipo vectorial_ COMSEG_page-0005.jpg" class="footer-component-logo" > 
                     </div>
